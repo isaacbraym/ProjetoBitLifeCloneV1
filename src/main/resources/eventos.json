@@ -1,0 +1,62 @@
+[
+  {
+    "descricao": "Você acorda em uma manhã ensolarada e se sente revigorado. O dia promete surpresas.",
+    "opcoes": ["Levantar da cama e se arrumar", "Ficar na cama um pouco mais"],
+    "efeitos": [0, -5],
+    "atributo": "saude"
+  },
+  {
+    "descricao": "No caminho para o trabalho, você encontra um cachorro perdido. Ele parece assustado e faminto.",
+    "opcoes": ["Levar o cachorro ao veterinário", "Ignorar e seguir seu caminho", "Adotar o cachorro"],
+    "efeitos": [5, 0, 10],
+    "atributo": "felicidade"
+  },
+  {
+    "descricao": "Você recebe uma oferta de emprego inesperada que pode mudar sua vida. A proposta é tentadora, mas exige riscos.",
+    "opcoes": ["Aceitar o emprego", "Recusar a oferta", "Negociar melhores condições"],
+    "efeitos": [10, -5, 5],
+    "atributo": "financas"
+  },
+  {
+    "descricao": "Um velho amigo entra em contato propondo uma viagem de aventura. As histórias do passado vêm à tona.",
+    "opcoes": ["Aceitar a viagem", "Recusar a viagem", "Pedir mais detalhes"],
+    "efeitos": [5, 0, 2],
+    "atributo": "carisma"
+  },
+  {
+    "descricao": "Você encontra um livro antigo em uma livraria de bairro, repleto de segredos e histórias místicas.",
+    "opcoes": ["Ler o livro imediatamente", "Guardar para ler depois", "Ignorar e sair da loja"],
+    "efeitos": [5, 0, -2],
+    "atributo": "inteligencia"
+  },
+  {
+    "descricao": "Após um dia extremamente estressante, uma crise de sanidade te assola. Você sente a necessidade de cuidar de si mesmo.",
+    "opcoes": ["Buscar ajuda profissional", "Meditar por alguns minutos", "Ignorar o estresse"],
+    "efeitos": [10, 5, -10],
+    "atributo": "sanidade"
+  },
+  {
+    "descricao": "Você ganha um prêmio inesperado em um sorteio. O dinheiro pode mudar sua vida, se usado com sabedoria.",
+    "opcoes": ["Investir o prêmio", "Gastar imediatamente em luxo", "Guardar para emergências"],
+    "efeitos": [10, -5, 5],
+    "atributo": "financas"
+  },
+  {
+    "descricao": "Durante um encontro, uma revelação surpreendente é feita que pode abalar suas convicções.",
+    "opcoes": ["Apoiar a pessoa", "Questionar a veracidade", "Ignorar o ocorrido"],
+    "efeitos": [5, -5, 0],
+    "atributo": "felicidade"
+  },
+  {
+    "descricao": "Você se depara com uma oportunidade única para aprender algo novo e expandir seus horizontes.",
+    "opcoes": ["Inscrever-se em um curso intensivo", "Ler sobre o assunto em livros", "Desistir da ideia"],
+    "efeitos": [10, 5, -5],
+    "atributo": "inteligencia"
+  },
+  {
+    "descricao": "Uma decisão difícil aparece em sua vida amorosa, desafiando suas crenças e emoções.",
+    "opcoes": ["Conversar abertamente sobre os sentimentos", "Evitar o assunto", "Tomar distância"],
+    "efeitos": [10, -5, 0],
+    "atributo": "felicidade"
+  }
+]
