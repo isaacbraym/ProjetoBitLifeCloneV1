@@ -1,6 +1,6 @@
 package br.com.braym.projetobitlifeclonev1.utils;
 
-import br.com.braym.projetobitlifeclonev1.eventos.Evento;
+import br.com.braym.projetobitlifeclonev1.domain.Evento;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.InputStream;

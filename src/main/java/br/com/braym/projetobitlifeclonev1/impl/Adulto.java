@@ -1,6 +1,6 @@
 package br.com.braym.projetobitlifeclonev1.impl;
 
-import br.com.braym.projetobitlifeclonev1.Personagem;
+import br.com.braym.projetobitlifeclonev1.domain.Personagem;
 import br.com.braym.projetobitlifeclonev1.interfaces.EstadoVida;
 
 /**
@@ -9,11 +9,12 @@ import br.com.braym.projetobitlifeclonev1.interfaces.EstadoVida;
 public class Adulto implements EstadoVida {
 
     @Override
-    public void proximoEstado(Personagem personagem) {
+    public EstadoVida proximoEstado(Personagem personagem) {
         if (personagem.getIdade() >= 65) {
             System.out.println("Transição: Adulto para Velhice");
-            // Realize a transição para o estado Velhice, se aplicável
+            return new Velhice();
         }
+        return this;
     }
 
     @Override

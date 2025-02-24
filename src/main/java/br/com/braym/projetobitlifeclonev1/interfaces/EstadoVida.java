@@ -1,16 +1,17 @@
 package br.com.braym.projetobitlifeclonev1.interfaces;
 
-import br.com.braym.projetobitlifeclonev1.Personagem;
+import br.com.braym.projetobitlifeclonev1.domain.Personagem;
 
 /**
  * Interface que define o comportamento dos estados de vida do personagem.
  */
 public interface EstadoVida {
     /**
-     * Realiza a transição para o próximo estado com base no atributo do personagem.
-     * @param personagem o personagem que terá seu estado avaliado
+     * Determina e retorna o próximo estado de vida com base na situação atual do personagem.
+     * @param personagem o personagem cuja idade e atributos são avaliados
+     * @return o próximo estado de vida
      */
-    void proximoEstado(Personagem personagem);
+    EstadoVida proximoEstado(Personagem personagem);
 
     /**
      * Retorna uma representação textual do estado.

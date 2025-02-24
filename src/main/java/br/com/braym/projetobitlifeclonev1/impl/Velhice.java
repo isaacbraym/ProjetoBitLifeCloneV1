@@ -1,6 +1,6 @@
 package br.com.braym.projetobitlifeclonev1.impl;
 
-import br.com.braym.projetobitlifeclonev1.Personagem;
+import br.com.braym.projetobitlifeclonev1.domain.Personagem;
 import br.com.braym.projetobitlifeclonev1.interfaces.EstadoVida;
 
 /**
@@ -9,9 +9,9 @@ import br.com.braym.projetobitlifeclonev1.interfaces.EstadoVida;
 public class Velhice implements EstadoVida {
 
     @Override
-    public void proximoEstado(Personagem personagem) {
-        // Em Velhice, a transição pode não ocorrer ou indicar fim de jogo.
-        System.out.println("O personagem está na Velhice. Mantenha o estado ou finalize o jogo.");
+    public EstadoVida proximoEstado(Personagem personagem) {
+        System.out.println("O personagem está na Velhice. Fim de transições.");
+        return this;
     }
 
     @Override

@@ -1,20 +1,30 @@
 package br.com.braym.projetobitlifeclonev1.impl;
 
-import br.com.braym.projetobitlifeclonev1.Personagem;
-import br.com.braym.projetobitlifeclonev1.eventos.Evento;
+import br.com.braym.projetobitlifeclonev1.domain.Personagem;
+import br.com.braym.projetobitlifeclonev1.domain.Evento;
 import br.com.braym.projetobitlifeclonev1.interfaces.EventoInterface;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  * Implementação concreta de um evento, permitindo execução interativa via console.
  */
 public class EventoImpl extends Evento implements EventoInterface {
+    private static final Logger LOGGER = Logger.getLogger(EventoImpl.class.getName());
+    private Scanner scanner;
 
     public EventoImpl(String descricao, List<String> opcoes, List<Integer> efeitos, String atributo) {
         super(descricao, opcoes, efeitos, atributo);
+        this.scanner = new Scanner(System.in);
     }
-    
+
+    public EventoImpl(String descricao, List<String> opcoes, List<Integer> efeitos, String atributo, Scanner scanner) {
+        super(descricao, opcoes, efeitos, atributo);
+        this.scanner = (scanner != null) ? scanner : new Scanner(System.in);
+    }
+
     @Override
     public void executarEvento(Personagem personagem) {
         System.out.println("Evento: " + getDescricao());
@@ -23,8 +33,7 @@ public class EventoImpl extends Evento implements EventoInterface {
             System.out.println((i + 1) + ": " + opcoes.get(i));
         }
         System.out.print("Escolha uma opção: ");
-        Scanner scanner = new Scanner(System.in);
-        int escolha = scanner.nextInt() - 1; // Ajusta para índice (0-based)
+        int escolha = scanner.nextInt() - 1;
         if (escolha >= 0 && escolha < opcoes.size()) {
             System.out.println("Você escolheu: " + opcoes.get(escolha));
             aplicarEfeito(personagem, escolha);
@@ -34,14 +43,25 @@ public class EventoImpl extends Evento implements EventoInterface {
     }
     
     /**
-     * Aplica o efeito ao personagem com base na opção escolhida.
+     * Aplica o efeito ao personagem com base na opção escolhida, considerando efeitos simples ou múltiplos.
      * @param personagem o personagem a ser afetado
      * @param escolha o índice da opção escolhida
      */
     public void aplicarEfeito(Personagem personagem, int escolha) {
-        int efeito = getEfeitos().get(escolha);
-        String atributo = getAtributo().toLowerCase();
-        
+        if (getEfeitosMultiplos() != null && !getEfeitosMultiplos().isEmpty()) {
+            for (Map.Entry<String, Integer> entry : getEfeitosMultiplos().entrySet()) {
+                String atributo = entry.getKey().toLowerCase();
+                int efeito = entry.getValue();
+                aplicarEfeitoPorAtributo(personagem, atributo, efeito);
+            }
+        } else {
+            int efeito = getEfeitos().get(escolha);
+            String atributo = getAtributo().toLowerCase();
+            aplicarEfeitoPorAtributo(personagem, atributo, efeito);
+        }
+    }
+
+    private void aplicarEfeitoPorAtributo(Personagem personagem, String atributo, int efeito) {
         switch (atributo) {
             case "financas":
                 personagem.alterarFinancas(efeito);
@@ -55,7 +75,12 @@ public class EventoImpl extends Evento implements EventoInterface {
             case "felicidade":
                 personagem.setFelicidade(personagem.getFelicidade() + efeito);
                 break;
-            // Adicionar outros casos conforme os atributos implementados
+            case "sanidade":
+                personagem.setSanidade(personagem.getSanidade() + efeito);
+                break;
+            case "carisma":
+                personagem.setCarisma(personagem.getCarisma() + efeito);
+                break;
             default:
                 System.out.println("Atributo não reconhecido: " + atributo);
                 break;

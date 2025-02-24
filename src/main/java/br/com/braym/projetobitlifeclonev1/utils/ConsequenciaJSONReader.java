@@ -1,7 +1,7 @@
 package br.com.braym.projetobitlifeclonev1.utils;
 
-import br.com.braym.projetobitlifeclonev1.consequencias.Consequencia;
-import br.com.braym.projetobitlifeclonev1.consequencias.ConsequenciaGrupo;
+import br.com.braym.projetobitlifeclonev1.domain.Consequencia;
+import br.com.braym.projetobitlifeclonev1.domain.ConsequenciaGrupo;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.InputStream;

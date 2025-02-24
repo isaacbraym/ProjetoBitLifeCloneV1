@@ -1,13 +1,17 @@
-package br.com.braym.projetobitlifeclonev1;
+package br.com.braym.projetobitlifeclonev1.domain;
 
 import br.com.braym.projetobitlifeclonev1.interfaces.Observador;
+import br.com.braym.projetobitlifeclonev1.interfaces.EstadoVida;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
- * Representa um personagem no jogo, com atributos e comportamento para atualização e notificação de mudanças.
+ * Representa um personagem no jogo com atributos e comportamentos, incluindo a gestão de estados de vida.
  */
 public class Personagem {
+    private static final Logger LOGGER = Logger.getLogger(Personagem.class.getName());
+
     private String nome;
     private int idade;
 
@@ -18,9 +22,13 @@ public class Personagem {
     private int felicidade;
     private int inteligencia;
     private int carisma;
-    private int financas; // Se necessário, aplicar limite com clamp
+    private int financas;
 
+    // Lista de observadores para notificações
     private final List<Observador> observadores = new ArrayList<>();
+
+    // Estado de vida atual (padrão State)
+    private EstadoVida estadoVida;
 
     public Personagem(String nome) {
         this.nome = nome;
@@ -32,10 +40,11 @@ public class Personagem {
         this.inteligencia = 50;
         this.carisma = 50;
         this.financas = 0;
+        // Estado inicial definido como Infância
+        this.estadoVida = new br.com.braym.projetobitlifeclonev1.impl.Infancia();
     }
 
-    // Getters e Setters com notificação e aplicação do clamp quando aplicável
-
+    // Getters e Setters com notificações
     public String getNome() {
         return nome;
     }
@@ -113,13 +122,11 @@ public class Personagem {
     }
 
     public void setFinancas(int financas) {
-        // Caso seja necessário limitar o valor, pode-se aplicar o clamp aqui
         this.financas = financas;
         notificarObservadores("Finanças atualizadas para: " + this.financas);
     }
 
-    // Métodos para gerenciamento de observadores
-
+    // Gerenciamento de observadores
     public void adicionarObservador(Observador observador) {
         if (observador != null && !observadores.contains(observador)) {
             observadores.add(observador);
@@ -131,13 +138,12 @@ public class Personagem {
     }
 
     private void notificarObservadores(String mensagem) {
-        for (Observador observador : observadores) {
-            observador.atualizar(mensagem);
+        for (Observador obs : observadores) {
+            obs.atualizar(mensagem);
         }
     }
 
     // Métodos para alteração de atributos
-
     public void alterarFinancas(int delta) {
         setFinancas(getFinancas() + delta);
     }
@@ -155,19 +161,47 @@ public class Personagem {
     }
 
     /**
-     * Simula o envelhecimento do personagem, incrementando a idade e alterando atributos.
+     * Simula o envelhecimento do personagem, incrementando a idade, alterando a saúde e atualizando o estado.
      */
     public void envelhecer() {
         setIdade(getIdade() + 1);
-        // Exemplo simples: diminui 1 ponto de saúde ao envelhecer
         setSaude(getSaude() - 1);
         notificarObservadores("Envelhecimento: idade = " + getIdade());
+        atualizarEstadoVida();
+    }
+
+    /**
+     * Atualiza o estado de vida do personagem utilizando o padrão State.
+     */
+    public void atualizarEstadoVida() {
+        EstadoVida novoEstado = estadoVida.proximoEstado(this);
+        if (!novoEstado.getEstado().equals(estadoVida.getEstado())) {
+            LOGGER.info("Transição de estado: de " + estadoVida.getEstado() + " para " + novoEstado.getEstado());
+            estadoVida = novoEstado;
+            notificarObservadores("Estado de vida alterado para: " + estadoVida.getEstado());
+        }
+    }
+
+    /**
+     * Retorna o estado de vida atual do personagem.
+     * @return o estado de vida
+     */
+    public EstadoVida getEstadoVida() {
+        return estadoVida;
+    }
+
+    /**
+     * Define o estado de vida atual do personagem.
+     * @param estadoVida novo estado de vida
+     */
+    public void setEstadoVida(EstadoVida estadoVida) {
+        this.estadoVida = estadoVida;
     }
 
     /**
      * Garante que um valor esteja dentro do intervalo [0, 100].
-     * @param valor o valor a ser ajustado
-     * @return o valor ajustado
+     * @param valor valor a ser ajustado
+     * @return valor ajustado
      */
     private int clamp(int valor) {
         return Math.max(0, Math.min(100, valor));

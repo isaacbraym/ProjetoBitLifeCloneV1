@@ -1,6 +1,6 @@
 package br.com.braym.projetobitlifeclonev1.impl;
 
-import br.com.braym.projetobitlifeclonev1.Personagem;
+import br.com.braym.projetobitlifeclonev1.domain.Personagem;
 import br.com.braym.projetobitlifeclonev1.interfaces.EstadoVida;
 
 /**
@@ -9,11 +9,12 @@ import br.com.braym.projetobitlifeclonev1.interfaces.EstadoVida;
 public class Infancia implements EstadoVida {
 
     @Override
-    public void proximoEstado(Personagem personagem) {
+    public EstadoVida proximoEstado(Personagem personagem) {
         if (personagem.getIdade() >= 12) {
             System.out.println("Transição: Infância para Adolescência");
-            // Definir a transição de estado conforme a regra de negócio
+            return new Adolescencia();
         }
+        return this;
     }
 
     @Override

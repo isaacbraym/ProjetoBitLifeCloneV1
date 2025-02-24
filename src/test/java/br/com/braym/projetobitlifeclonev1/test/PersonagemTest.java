@@ -2,7 +2,7 @@ package br.com.braym.projetobitlifeclonev1.test;
 
 import org.junit.Assert;
 import org.junit.Test;
-import br.com.braym.projetobitlifeclonev1.Personagem;
+import br.com.braym.projetobitlifeclonev1.domain.Personagem;
 
 /**
  * Testes unitários para a classe Personagem.
