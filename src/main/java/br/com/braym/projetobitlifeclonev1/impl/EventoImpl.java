@@ -16,12 +16,12 @@ public class EventoImpl extends Evento implements EventoInterface {
     private Scanner scanner;
 
     public EventoImpl(String descricao, List<String> opcoes, List<Integer> efeitos, String atributo) {
-        super(descricao, opcoes, efeitos, atributo);
+        super(descricao, atributo, opcoes, efeitos, atributo);
         this.scanner = new Scanner(System.in);
     }
 
     public EventoImpl(String descricao, List<String> opcoes, List<Integer> efeitos, String atributo, Scanner scanner) {
-        super(descricao, opcoes, efeitos, atributo);
+        super(descricao, atributo, opcoes, efeitos, atributo);
         this.scanner = (scanner != null) ? scanner : new Scanner(System.in);
     }
 

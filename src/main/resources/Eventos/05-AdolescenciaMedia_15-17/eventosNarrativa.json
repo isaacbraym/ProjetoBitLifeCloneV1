@@ -1,0 +1,78 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você questiona as crenças familiares e busca novas perspectivas para sua vida.",
+    "periodo": "adolescencia_media",
+    "opcoes": [
+      {
+        "texto": "Explorar novas ideias com curiosidade",
+        "retornoNarrativo": "A mente aberta amplia seus horizontes, fortalecendo sua inteligência.",
+        "efeitos": { "inteligencia": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Manter a tradição sem questionamentos",
+        "retornoNarrativo": "A rigidez limita seu crescimento, causando certo desgaste emocional.",
+        "efeitos": { "felicidade": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "descricao": "A liberdade de sair com amigos desperta a vontade de viver intensamente.",
+    "periodo": "adolescencia_media",
+    "opcoes": [
+      {
+        "texto": "Aproveitar cada oportunidade de diversão",
+        "retornoNarrativo": "O entusiasmo contagia, elevando seu carisma.",
+        "efeitos": { "carisma": 5 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Ser cauteloso e evitar excessos",
+        "retornoNarrativo": "A prudência protege, mas limita a experiência emocional.",
+        "efeitos": { "felicidade": 1 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "descricao": "Um desentendimento com um amigo próximo coloca à prova sua habilidade de resolver conflitos.",
+    "periodo": "adolescencia_media",
+    "opcoes": [
+      {
+        "texto": "Conversar e buscar entendimento",
+        "retornoNarrativo": "A empatia fortalece a amizade e seu equilíbrio emocional.",
+        "efeitos": { "felicidade": 3 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Evitar o confronto e se isolar",
+        "retornoNarrativo": "O isolamento causa um pequeno abalo no seu ânimo.",
+        "efeitos": { "carisma": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "descricao": "Um desafio escolar exigente testa sua disciplina e organização.",
+    "periodo": "adolescencia_media",
+    "opcoes": [
+      {
+        "texto": "Estudar com dedicação e foco",
+        "retornoNarrativo": "O esforço nos estudos eleva sua inteligência e autoconfiança.",
+        "efeitos": { "inteligencia": 5 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Procrastinar e arriscar o desempenho",
+        "retornoNarrativo": "A procrastinação causa estresse e compromete seu desempenho.",
+        "efeitos": { "felicidade": -3 },
+        "idProximoEvento": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "001",
+    "descricao": "Na escola, você se destaca em uma atividade coletiva, ganhando elogios dos professores.",
+    "periodo": "terceira_infancia",
+    "opcoes": [
+      {
+        "texto": "Agradecer e se sentir motivado",
+        "retornoNarrativo": "Os elogios reforçam sua confiança e inteligência.",
+        "efeitos": { "inteligencia": 5 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Ignorar os elogios e se concentrar no trabalho",
+        "retornoNarrativo": "A humildade fortalece sua disciplina, mas com menos brilho emocional.",
+        "efeitos": { "felicidade": 2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "descricao": "Em aula de matemática, um problema desafiador desperta sua curiosidade.",
+    "periodo": "terceira_infancia",
+    "opcoes": [
+      {
+        "texto": "Tentar resolver com esforço",
+        "retornoNarrativo": "Sua dedicação melhora seu raciocínio lógico.",
+        "efeitos": { "inteligencia": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Pedir ajuda aos colegas",
+        "retornoNarrativo": "O trabalho em equipe fortalece suas relações e habilidades sociais.",
+        "efeitos": { "carisma": 3 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "descricao": "Durante uma partida de futebol, você mostra agilidade e espírito de equipe.",
+    "periodo": "terceira_infancia",
+    "opcoes": [
+      {
+        "texto": "Marcar um gol decisivo",
+        "retornoNarrativo": "Sua energia e saúde se destacam, motivando o time.",
+        "efeitos": { "saude": 3 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Ajudar um colega que caiu",
+        "retornoNarrativo": "O gesto de empatia eleva seu carisma e humanidade.",
+        "efeitos": { "carisma": 4 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "descricao": "Você explora a pintura e cria uma obra única, expressando suas emoções de forma vibrante.",
+    "periodo": "terceira_infancia",
+    "opcoes": [
+      {
+        "texto": "Exibir sua obra com orgulho",
+        "retornoNarrativo": "A expressão artística aumenta sua autoestima e criatividade.",
+        "efeitos": { "felicidade": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Guardar a obra para um momento especial",
+        "retornoNarrativo": "A reserva de suas emoções reforça sua sensibilidade.",
+        "efeitos": { "inteligencia": 2 },
+        "idProximoEvento": null
+      }
+    ]
+  }
+]

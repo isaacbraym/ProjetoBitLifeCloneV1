@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você consegue seu primeiro emprego e começa a lidar com as responsabilidades do mundo adulto.",
+    "opcoes": ["Aceitar o desafio com determinação", "Sentir insegurança e hesitar"],
+    "efeitos": [4, -2],
+    "atributo": "financas"
+  },
+  {
+    "id": "002",
+    "descricao": "Surge a decisão entre ingressar na universidade ou seguir um caminho diferente na carreira.",
+    "opcoes": ["Optar pela faculdade", "Explorar outras oportunidades"],
+    "efeitos": [3, 1],
+    "atributo": "inteligencia"
+  },
+  {
+    "id": "003",
+    "descricao": "Você se muda para uma nova cidade em busca de estudos ou trabalho, enfrentando o desafio da adaptação.",
+    "opcoes": ["Abraçar a mudança com otimismo", "Sentir saudade e hesitar"],
+    "efeitos": [4, -1],
+    "atributo": "felicidade"
+  },
+  {
+    "id": "004",
+    "descricao": "Lida com a pressão de se tornar financeiramente independente, aprendendo a gerenciar o orçamento.",
+    "opcoes": ["Controlar as finanças com sabedoria", "Gastar impulsivamente"],
+    "efeitos": [5, -3],
+    "atributo": "financas"
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "001",
+    "descricao": "Consolidar a carreira traz a satisfação de ver os frutos do seu trabalho.",
+    "periodo": "adulto_jovem",
+    "opcoes": [
+      {
+        "texto": "Continuar investindo e crescer profissionalmente",
+        "retornoNarrativo": "Sua visão de futuro resulta em estabilidade financeira e orgulho pessoal.",
+        "efeitos": { "financas": 5 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Ficar complacente e parar de buscar melhorias",
+        "retornoNarrativo": "A estagnação diminui seu dinamismo, afetando seu progresso.",
+        "efeitos": { "financas": -3 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "descricao": "A formação de uma família traz momentos de intensa alegria e desafios diários.",
+    "periodo": "adulto_jovem",
+    "opcoes": [
+      {
+        "texto": "Abraçar a paternidade/maternidade com dedicação",
+        "retornoNarrativo": "O amor familiar aumenta sua felicidade e senso de responsabilidade.",
+        "efeitos": { "felicidade": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Sentir-se sobrecarregado com as responsabilidades",
+        "retornoNarrativo": "A pressão causa desgaste emocional e afeta seu humor.",
+        "efeitos": { "felicidade": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "descricao": "Lutar para equilibrar trabalho e vida pessoal se torna uma batalha diária.",
+    "periodo": "adulto_jovem",
+    "opcoes": [
+      {
+        "texto": "Buscar um equilíbrio saudável entre carreira e lazer",
+        "retornoNarrativo": "O equilíbrio melhora sua saúde e qualidade de vida.",
+        "efeitos": { "saude": 3 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Priorizar o trabalho em demasia e negligenciar a vida pessoal",
+        "retornoNarrativo": "O excesso de trabalho prejudica seu bem-estar e diminui a felicidade.",
+        "efeitos": { "saude": -3 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "descricao": "Investir para o futuro se torna uma decisão crucial para sua estabilidade.",
+    "periodo": "adulto_jovem",
+    "opcoes": [
+      {
+        "texto": "Planejar e economizar com cautela",
+        "retornoNarrativo": "A disciplina financeira garante segurança e tranquilidade.",
+        "efeitos": { "financas": 5 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Gastar sem controle, comprometendo o futuro",
+        "retornoNarrativo": "A imprudência financeira gera problemas e reduz sua estabilidade.",
+        "efeitos": { "financas": -3 },
+        "idProximoEvento": null
+      }
+    ]
+  }
+]

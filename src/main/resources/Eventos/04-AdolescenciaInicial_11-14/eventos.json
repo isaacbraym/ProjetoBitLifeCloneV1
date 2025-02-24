@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você nota as primeiras mudanças em seu corpo, despertando curiosidade e, às vezes, insegurança.",
+    "opcoes": ["Abraçar as mudanças com confiança", "Ficar preocupado"],
+    "efeitos": [3, -2],
+    "atributo": "saude"
+  },
+  {
+    "id": "002",
+    "descricao": "Você experimenta um primeiro crush, vivenciando emoções intensas e confusas.",
+    "opcoes": ["Expressar seus sentimentos", "Manter tudo em segredo"],
+    "efeitos": [4, 0],
+    "atributo": "felicidade"
+  },
+  {
+    "id": "003",
+    "descricao": "Descobre um novo interesse por esportes ou artes, abrindo caminho para novas paixões.",
+    "opcoes": ["Investir no novo hobby", "Ignorar a novidade"],
+    "efeitos": [3, 0],
+    "atributo": "inteligencia"
+  },
+  {
+    "id": "004",
+    "descricao": "Enfrenta um leve conflito com os pais sobre liberdade e responsabilidades.",
+    "opcoes": ["Dialogar calmamente", "Rebelar-se impulsivamente"],
+    "efeitos": [2, -3],
+    "atributo": "carisma"
+  }
+]

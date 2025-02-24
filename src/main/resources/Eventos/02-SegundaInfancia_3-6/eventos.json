@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você vai ao parque pela primeira vez e se encanta com a diversão e o espaço para correr.",
+    "opcoes": ["Correr e brincar intensamente", "Ficar sentado observando"],
+    "efeitos": [5, 2],
+    "atributo": "felicidade"
+  },
+  {
+    "id": "002",
+    "descricao": "Ao descobrir as cores do mundo, você se maravilha com um vibrante arco-íris.",
+    "opcoes": ["Exclamar de alegria", "Ignorar por timidez"],
+    "efeitos": [4, 0],
+    "atributo": "inteligencia"
+  },
+  {
+    "id": "003",
+    "descricao": "Durante uma brincadeira de esconde-esconde, você se diverte muito com os amigos.",
+    "opcoes": ["Rir alto e participar", "Ficar tímido"],
+    "efeitos": [3, 0],
+    "atributo": "carisma"
+  },
+  {
+    "id": "004",
+    "descricao": "Você faz seu primeiro desenho e cria um mundo cheio de imaginação.",
+    "opcoes": ["Exibir o desenho com orgulho", "Guardar o desenho para si"],
+    "efeitos": [4, 1],
+    "atributo": "inteligencia"
+  }
+]

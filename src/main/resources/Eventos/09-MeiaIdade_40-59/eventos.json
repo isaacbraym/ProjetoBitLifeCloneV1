@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você começa a reavaliar sua carreira e o propósito de sua vida, buscando novos horizontes.",
+    "opcoes": ["Investir em autoconhecimento e mudanças", "Manter a rotina sem questionar"],
+    "efeitos": [4, -1],
+    "atributo": "inteligencia"
+  },
+  {
+    "id": "002",
+    "descricao": "Sinais de crise da meia-idade surgem, com sentimentos de insatisfação e dúvidas existenciais.",
+    "opcoes": ["Buscar ajuda e refletir", "Ignorar os sentimentos"],
+    "efeitos": [3, -2],
+    "atributo": "felicidade"
+  },
+  {
+    "id": "003",
+    "descricao": "Você adota um novo estilo de vida focado na saúde e bem-estar, fazendo mudanças significativas.",
+    "opcoes": ["Praticar exercícios e melhorar a dieta", "Manter hábitos antigos"],
+    "efeitos": [5, -3],
+    "atributo": "saude"
+  },
+  {
+    "id": "004",
+    "descricao": "Enfrenta desafios em seus relacionamentos familiares e sociais, tentando preservar a harmonia.",
+    "opcoes": ["Dialogar abertamente e buscar soluções", "Evitar conflitos"],
+    "efeitos": [3, 0],
+    "atributo": "carisma"
+  }
+]

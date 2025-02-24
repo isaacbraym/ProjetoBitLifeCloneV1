@@ -1,0 +1,78 @@
+[
+  {
+    "id": "001",
+    "descricao": "A dependência total para as atividades diárias torna-se uma realidade dura.",
+    "periodo": "velhice_avancada",
+    "opcoes": [
+      {
+        "texto": "Aceitar a ajuda com gratidão e dignidade",
+        "retornoNarrativo": "A aceitação traz paz e reforça os laços afetivos com a família.",
+        "efeitos": { "saude": 3 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Sentir frustração e desespero",
+        "retornoNarrativo": "A resistência gera angústia, afetando negativamente sua saúde emocional.",
+        "efeitos": { "saude": -3 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "descricao": "A luta diária contra doenças degenerativas é um desafio constante.",
+    "periodo": "velhice_avancada",
+    "opcoes": [
+      {
+        "texto": "Seguir os tratamentos com esperança",
+        "retornoNarrativo": "O esforço para se manter saudável gera momentos de superação.",
+        "efeitos": { "saude": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Desistir e se isolar emocionalmente",
+        "retornoNarrativo": "A desistência agrava os sintomas e aumenta o sentimento de abandono.",
+        "efeitos": { "saude": -4 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "descricao": "Você compartilha sua sabedoria acumulada, inspirando todos com suas histórias de vida.",
+    "periodo": "velhice_avancada",
+    "opcoes": [
+      {
+        "texto": "Ensinar e se orgulhar de seu legado",
+        "retornoNarrativo": "O compartilhamento fortalece sua autoestima e valoriza sua trajetória.",
+        "efeitos": { "inteligencia": 5 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Guardar suas histórias sem compartilhá-las",
+        "retornoNarrativo": "A retenção impede a conexão com as novas gerações, causando leve tristeza.",
+        "efeitos": { "felicidade": -1 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "descricao": "A busca por conforto emocional torna-se fundamental neste estágio da vida.",
+    "periodo": "velhice_avancada",
+    "opcoes": [
+      {
+        "texto": "Conectar-se intensamente com os entes queridos",
+        "retornoNarrativo": "A forte conexão familiar eleva seu ânimo, mesmo diante das dificuldades.",
+        "efeitos": { "felicidade": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Sentir a solidão pesar no coração",
+        "retornoNarrativo": "O isolamento emocional reduz sua satisfação e bem-estar.",
+        "efeitos": { "felicidade": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  }
+]

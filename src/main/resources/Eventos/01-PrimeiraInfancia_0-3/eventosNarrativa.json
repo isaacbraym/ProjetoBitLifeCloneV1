@@ -1,0 +1,78 @@
+[
+  {
+    "id": "001",
+    "descricao": "No hospital, seus pais celebram seu primeiro sorriso com lágrimas de alegria.",
+    "periodo": "primeira_infancia",
+    "opcoes": [
+      {
+        "texto": "Abraçar esse momento único",
+        "retornoNarrativo": "Você irradia felicidade contagiante, fortalecendo os laços familiares.",
+        "efeitos": { "felicidade": 5 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Ficar pensativo, sem demonstrar emoção",
+        "retornoNarrativo": "A timidez se instala, mas a segurança dos pais permanece.",
+        "efeitos": { "felicidade": 1 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "descricao": "Enquanto engatinha, você derruba seu brinquedo favorito, provocando risos em casa.",
+    "periodo": "primeira_infancia",
+    "opcoes": [
+      {
+        "texto": "Rir alto e pedir que te ajudem a pegar o brinquedo",
+        "retornoNarrativo": "O ambiente se enche de alegria, aumentando sua confiança.",
+        "efeitos": { "inteligencia": 3 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Chorar e se recusar a se levantar",
+        "retornoNarrativo": "A tristeza momentânea gera um leve abalo, mas logo passa.",
+        "efeitos": { "felicidade": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "descricao": "Durante o banho, você se diverte ao ver a água espiralar, despertando curiosidade.",
+    "periodo": "primeira_infancia",
+    "opcoes": [
+      {
+        "texto": "Brincar e esguichar água para todos",
+        "retornoNarrativo": "A diversão contagia a família, elevando seu senso de descoberta.",
+        "efeitos": { "felicidade": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Ficar quieto e observar atentamente",
+        "retornoNarrativo": "A atenção aos detalhes aprimora sua percepção, mas sem grande explosão de emoção.",
+        "efeitos": { "inteligencia": 2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "descricao": "Ao dar seus primeiros passos, você cai, mas rapidamente se levanta com determinação.",
+    "periodo": "primeira_infancia",
+    "opcoes": [
+      {
+        "texto": "Tentar novamente com coragem",
+        "retornoNarrativo": "A persistência fortalece sua saúde e determinação.",
+        "efeitos": { "saude": 5 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Ficar no chão e chorar um pouco",
+        "retornoNarrativo": "A frustração diminui sua disposição momentaneamente.",
+        "efeitos": { "saude": -3 },
+        "idProximoEvento": null
+      }
+    ]
+  }
+]

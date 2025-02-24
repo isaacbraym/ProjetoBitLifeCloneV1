@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você inicia sua carreira profissional, sentindo a emoção de um novo começo e desafios diários.",
+    "opcoes": ["Se dedicar com foco", "Procrastinar e adiar responsabilidades"],
+    "efeitos": [5, -2],
+    "atributo": "financas"
+  },
+  {
+    "id": "002",
+    "descricao": "Um relacionamento amoroso sério se inicia, trazendo tanto alegrias quanto desafios.",
+    "opcoes": ["Investir na relação com carinho", "Manter certa distância emocional"],
+    "efeitos": [4, -1],
+    "atributo": "felicidade"
+  },
+  {
+    "id": "003",
+    "descricao": "Você se muda para morar sozinho, descobrindo a importância de cuidar de si mesmo.",
+    "opcoes": ["Organizar sua vida com responsabilidade", "Sentir a solidão pesar"],
+    "efeitos": [3, -2],
+    "atributo": "saude"
+  },
+  {
+    "id": "004",
+    "descricao": "Descobre um novo hobby que estimula sua criatividade e relaxa a mente após dias intensos.",
+    "opcoes": ["Aprofundar-se no hobby", "Desistir por falta de tempo"],
+    "efeitos": [4, -1],
+    "atributo": "inteligencia"
+  }
+]

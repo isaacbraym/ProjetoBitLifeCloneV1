@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você começa a frequentar a escola e faz novos amigos, descobrindo um mundo de aprendizado.",
+    "opcoes": ["Participar ativamente das aulas", "Ficar reservado"],
+    "efeitos": [5, 0],
+    "atributo": "carisma"
+  },
+  {
+    "id": "002",
+    "descricao": "Em aula de matemática, você aprende a contar de maneira divertida, surpreendendo o professor.",
+    "opcoes": ["Contar com entusiasmo", "Ficar confuso"],
+    "efeitos": [4, -1],
+    "atributo": "inteligencia"
+  },
+  {
+    "id": "003",
+    "descricao": "Durante uma partida de futebol, você se destaca com muita energia e alegria.",
+    "opcoes": ["Marcar um gol", "Ficar no banco"],
+    "efeitos": [3, 0],
+    "atributo": "saude"
+  },
+  {
+    "id": "004",
+    "descricao": "Você descobre a pintura e expressa sua criatividade, colorindo o mundo à sua volta.",
+    "opcoes": ["Pintar com dedicação", "Perder o interesse rapidamente"],
+    "efeitos": [4, 0],
+    "atributo": "felicidade"
+  }
+]

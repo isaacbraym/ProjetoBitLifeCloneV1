@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você dá seu primeiro sorriso, encantando toda a família com sua inocência.",
+    "opcoes": ["Sorrir amplamente", "Manter uma expressão neutra"],
+    "efeitos": [5, 0],
+    "atributo": "felicidade"
+  },
+  {
+    "id": "002",
+    "descricao": "Ao tentar engatinhar, você derruba um brinquedo, mas ri da própria trapalhada.",
+    "opcoes": ["Continuar engatinhando com entusiasmo", "Parar para observar o ambiente"],
+    "efeitos": [3, 1],
+    "atributo": "inteligencia"
+  },
+  {
+    "id": "003",
+    "descricao": "Durante o banho, a água voa para todos os lados enquanto você se diverte.",
+    "opcoes": ["Rir e brincar", "Ficar quieto e observar"],
+    "efeitos": [4, 0],
+    "atributo": "felicidade"
+  },
+  {
+    "id": "004",
+    "descricao": "Você dá seus primeiros passos; mesmo caindo, demonstra uma incrível determinação.",
+    "opcoes": ["Levantar e tentar novamente", "Ficar no chão"],
+    "efeitos": [5, -2],
+    "atributo": "saude"
+  }
+]

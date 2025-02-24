@@ -1,0 +1,78 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você percebe as mudanças no seu corpo e sente uma mistura de orgulho e insegurança.",
+    "periodo": "adolescencia_inicial",
+    "opcoes": [
+      {
+        "texto": "Abraçar as mudanças com confiança",
+        "retornoNarrativo": "A aceitação fortalece sua saúde emocional.",
+        "efeitos": { "saude": 3 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Ficar preocupado e se fechar",
+        "retornoNarrativo": "A insegurança gera tensão, afetando seu bem-estar.",
+        "efeitos": { "felicidade": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "descricao": "Seu primeiro crush desperta emoções intensas, confundindo seu coração.",
+    "periodo": "adolescencia_inicial",
+    "opcoes": [
+      {
+        "texto": "Expressar seus sentimentos abertamente",
+        "retornoNarrativo": "A vulnerabilidade traz crescimento emocional e conexão.",
+        "efeitos": { "felicidade": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Manter os sentimentos em segredo",
+        "retornoNarrativo": "A reserva pode proteger, mas também gera dúvidas internas.",
+        "efeitos": { "inteligencia": 1 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "descricao": "Descobre um novo esporte que desperta sua paixão e lhe dá um senso de pertencimento.",
+    "periodo": "adolescencia_inicial",
+    "opcoes": [
+      {
+        "texto": "Investir com entusiasmo no esporte",
+        "retornoNarrativo": "A dedicação fortalece sua saúde e espírito competitivo.",
+        "efeitos": { "saude": 3 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Ignorar e se concentrar em estudos",
+        "retornoNarrativo": "A escolha acadêmica melhora seu foco, mas deixa de lado a socialização.",
+        "efeitos": { "inteligencia": 2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "descricao": "Um leve conflito com os pais obriga você a aprender o valor do diálogo.",
+    "periodo": "adolescencia_inicial",
+    "opcoes": [
+      {
+        "texto": "Dialogar calmamente para resolver o impasse",
+        "retornoNarrativo": "A comunicação fortalece os laços familiares e sua maturidade.",
+        "efeitos": { "carisma": 3 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Rebeldar-se impulsivamente",
+        "retornoNarrativo": "A atitude impulsiva gera tensão e prejudica seu humor.",
+        "efeitos": { "felicidade": -3 },
+        "idProximoEvento": null
+      }
+    ]
+  }
+]

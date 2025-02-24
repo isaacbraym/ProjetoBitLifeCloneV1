@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você começa a sentir limitações físicas que o forçam a depender um pouco mais dos familiares.",
+    "opcoes": ["Aceitar com serenidade", "Lutar contra as limitações"],
+    "efeitos": [3, -2],
+    "atributo": "saude"
+  },
+  {
+    "id": "002",
+    "descricao": "Enfrenta problemas de saúde crônica que exigem cuidados constantes e disciplina nos tratamentos.",
+    "opcoes": ["Seguir rigorosamente os tratamentos", "Negligenciar os cuidados"],
+    "efeitos": [4, -3],
+    "atributo": "saude"
+  },
+  {
+    "id": "003",
+    "descricao": "Você busca socialização ativa para evitar a solidão e manter o ânimo.",
+    "opcoes": ["Participar de grupos e atividades", "Ficar isolado"],
+    "efeitos": [4, -2],
+    "atributo": "felicidade"
+  },
+  {
+    "id": "004",
+    "descricao": "Reflete profundamente sobre sua vida, pensando no legado que deixará para as futuras gerações.",
+    "opcoes": ["Compartilhar suas memórias e lições", "Guardar tudo para si"],
+    "efeitos": [5, -1],
+    "atributo": "inteligencia"
+  }
+]

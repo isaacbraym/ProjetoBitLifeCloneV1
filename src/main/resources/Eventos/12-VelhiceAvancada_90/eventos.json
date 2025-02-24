@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você passa a depender totalmente de terceiros para suas atividades diárias, enfrentando a realidade da dependência.",
+    "opcoes": ["Aceitar a ajuda com gratidão", "Sentir frustração com a dependência"],
+    "efeitos": [3, -3],
+    "atributo": "saude"
+  },
+  {
+    "id": "002",
+    "descricao": "Luta diariamente contra doenças degenerativas que afetam sua qualidade de vida.",
+    "opcoes": ["Seguir os tratamentos com esperança", "Desistir e se isolar"],
+    "efeitos": [4, -4],
+    "atributo": "saude"
+  },
+  {
+    "id": "003",
+    "descricao": "Você compartilha sua sabedoria acumulada, inspirando as pessoas ao seu redor com histórias de superação.",
+    "opcoes": ["Ensinar e se orgulhar", "Guardar suas histórias para si"],
+    "efeitos": [5, 0],
+    "atributo": "inteligencia"
+  },
+  {
+    "id": "004",
+    "descricao": "Busca conforto emocional e apoio, valorizando cada momento com os entes queridos.",
+    "opcoes": ["Conectar-se intensamente com a família", "Sentir a solidão pesar"],
+    "efeitos": [4, -2],
+    "atributo": "felicidade"
+  }
+]

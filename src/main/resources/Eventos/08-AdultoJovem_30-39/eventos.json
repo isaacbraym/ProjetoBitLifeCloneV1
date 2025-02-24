@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você consolida sua carreira e começa a desfrutar de uma estabilidade financeira promissora.",
+    "opcoes": ["Continuar investindo com visão de futuro", "Ficar complacente com o status quo"],
+    "efeitos": [5, -2],
+    "atributo": "financas"
+  },
+  {
+    "id": "002",
+    "descricao": "Inicia a formação de uma família, vivenciando as alegrias e os desafios da paternidade/maternidade.",
+    "opcoes": ["Abraçar essa nova fase com entusiasmo", "Sentir insegurança diante das responsabilidades"],
+    "efeitos": [4, -1],
+    "atributo": "felicidade"
+  },
+  {
+    "id": "003",
+    "descricao": "Você luta para equilibrar as demandas do trabalho com a vida pessoal, enfrentando jornadas intensas.",
+    "opcoes": ["Buscar um equilíbrio saudável", "Priorizar o trabalho em demasia"],
+    "efeitos": [3, -2],
+    "atributo": "saude"
+  },
+  {
+    "id": "004",
+    "descricao": "Decide investir de forma estratégica para garantir um futuro financeiramente seguro.",
+    "opcoes": ["Planejar e economizar com cautela", "Gastar sem controle"],
+    "efeitos": [5, -3],
+    "atributo": "financas"
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "001",
+    "descricao": "As limitações físicas começam a afetar sua autonomia, exigindo mais apoio familiar.",
+    "periodo": "idoso_maduro",
+    "opcoes": [
+      {
+        "texto": "Aceitar as limitações com serenidade",
+        "retornoNarrativo": "A aceitação traz paz interior e fortalece os laços com a família.",
+        "efeitos": { "saude": 3 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Lutar contra as limitações e se desgastar",
+        "retornoNarrativo": "O esforço excessivo gera frustração e prejudica sua saúde.",
+        "efeitos": { "saude": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "descricao": "Problemas crônicos de saúde exigem cuidados constantes e disciplina nos tratamentos.",
+    "periodo": "idoso_maduro",
+    "opcoes": [
+      {
+        "texto": "Seguir rigorosamente os tratamentos",
+        "retornoNarrativo": "O comprometimento melhora sua qualidade de vida e estabilidade.",
+        "efeitos": { "saude": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Negligenciar os cuidados e arriscar complicações",
+        "retornoNarrativo": "A negligência acarreta agravamento dos sintomas e desconforto.",
+        "efeitos": { "saude": -3 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "descricao": "A busca por socialização se torna fundamental para evitar a solidão e depressão.",
+    "periodo": "idoso_maduro",
+    "opcoes": [
+      {
+        "texto": "Participar de grupos e atividades sociais",
+        "retornoNarrativo": "A interação social eleva seu ânimo e mantém a mente ativa.",
+        "efeitos": { "felicidade": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Ficar isolado e se fechar emocionalmente",
+        "retornoNarrativo": "O isolamento gera sentimentos de tristeza e solidão.",
+        "efeitos": { "felicidade": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "descricao": "Refletir sobre a vida e o legado a ser deixado traz uma sensação de missão.",
+    "periodo": "idoso_maduro",
+    "opcoes": [
+      {
+        "texto": "Compartilhar suas memórias e lições com os jovens",
+        "retornoNarrativo": "A transmissão de sabedoria fortalece sua autoestima e legado.",
+        "efeitos": { "inteligencia": 5 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Guardar tudo para si, sem compartilhar",
+        "retornoNarrativo": "A introspecção excessiva pode levar a sentimentos de arrependimento.",
+        "efeitos": { "inteligencia": -1 },
+        "idProximoEvento": null
+      }
+    ]
+  }
+]

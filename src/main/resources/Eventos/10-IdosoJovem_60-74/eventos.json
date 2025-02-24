@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você se aposenta e precisa se adaptar a um ritmo de vida mais tranquilo e diferente.",
+    "opcoes": ["Abraçar a aposentadoria com gratidão", "Sentir falta da antiga rotina"],
+    "efeitos": [4, -2],
+    "atributo": "felicidade"
+  },
+  {
+    "id": "002",
+    "descricao": "Descobre um novo hobby que reaviva sua energia e mantém a mente ativa.",
+    "opcoes": ["Investir tempo no hobby", "Perder o interesse com o tempo"],
+    "efeitos": [3, -1],
+    "atributo": "inteligencia"
+  },
+  {
+    "id": "003",
+    "descricao": "Enfrenta desafios para manter a saúde, ajustando sua rotina de exercícios conforme suas limitações.",
+    "opcoes": ["Adotar atividades leves", "Abandonar a prática física"],
+    "efeitos": [4, -3],
+    "atributo": "saude"
+  },
+  {
+    "id": "004",
+    "descricao": "Valoriza os momentos com netos e familiares, reforçando os laços afetivos.",
+    "opcoes": ["Aproveitar cada instante", "Manter certa distância emocional"],
+    "efeitos": [5, -1],
+    "atributo": "carisma"
+  }
+]

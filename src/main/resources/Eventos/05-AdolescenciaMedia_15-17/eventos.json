@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "descricao": "Você começa a explorar sua identidade e questiona antigas crenças, abrindo a mente para novas ideias.",
+    "opcoes": ["Investigar novas perspectivas", "Manter a visão tradicional"],
+    "efeitos": [3, -2],
+    "atributo": "inteligencia"
+  },
+  {
+    "id": "002",
+    "descricao": "A liberdade de sair com amigos sem a supervisão dos pais chega, trazendo diversão e riscos.",
+    "opcoes": ["Aproveitar a experiência", "Ser cauteloso demais"],
+    "efeitos": [4, 1],
+    "atributo": "carisma"
+  },
+  {
+    "id": "003",
+    "descricao": "Um desentendimento com um amigo próximo testa sua habilidade de resolver conflitos.",
+    "opcoes": ["Conversar e resolver o problema", "Evitar o confronto"],
+    "efeitos": [2, -1],
+    "atributo": "felicidade"
+  },
+  {
+    "id": "004",
+    "descricao": "Você enfrenta um desafio escolar que exige dedicação extra e organização.",
+    "opcoes": ["Estudar com afinco", "Procrastinar e arriscar o desempenho"],
+    "efeitos": [5, -3],
+    "atributo": "inteligencia"
+  }
+]

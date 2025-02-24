@@ -1,0 +1,78 @@
+[
+  {
+    "id": "001",
+    "descricao": "A aposentadoria traz um novo ritmo e a chance de redescobrir prazeres simples.",
+    "periodo": "idoso_jovem",
+    "opcoes": [
+      {
+        "texto": "Abraçar a aposentadoria com gratidão",
+        "retornoNarrativo": "A aceitação melhora seu humor e reforça a estabilidade emocional.",
+        "efeitos": { "felicidade": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Sentir falta da antiga rotina e se lamentar",
+        "retornoNarrativo": "A nostalgia diminui sua satisfação e gera um leve abatimento.",
+        "efeitos": { "felicidade": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "descricao": "Você descobre um novo hobby que reaviva sua energia e mantém sua mente ativa.",
+    "periodo": "idoso_jovem",
+    "opcoes": [
+      {
+        "texto": "Investir tempo e aprender algo novo",
+        "retornoNarrativo": "O engajamento com o hobby estimula sua inteligência e vitalidade.",
+        "efeitos": { "inteligencia": 3 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Perder o interesse com o tempo",
+        "retornoNarrativo": "A desistência diminui sua motivação e afeta o ânimo.",
+        "efeitos": { "felicidade": -1 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "descricao": "Desafios para manter a saúde fazem você repensar a intensidade das atividades físicas.",
+    "periodo": "idoso_jovem",
+    "opcoes": [
+      {
+        "texto": "Adotar atividades leves e regulares",
+        "retornoNarrativo": "O cuidado com o corpo melhora sua saúde e disposição.",
+        "efeitos": { "saude": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Abandonar a prática física por desânimo",
+        "retornoNarrativo": "A inatividade prejudica sua saúde e gera declínio gradual.",
+        "efeitos": { "saude": -3 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "descricao": "Momentos com os netos e a família trazem calor humano e renovam seus laços afetivos.",
+    "periodo": "idoso_jovem",
+    "opcoes": [
+      {
+        "texto": "Aproveitar cada instante com alegria",
+        "retornoNarrativo": "A proximidade familiar aumenta seu carisma e bem-estar.",
+        "efeitos": { "carisma": 5 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Manter distância por insegurança",
+        "retornoNarrativo": "O distanciamento afeta seus laços e diminui o ânimo.",
+        "efeitos": { "carisma": -1 },
+        "idProximoEvento": null
+      }
+    ]
+  }
+]

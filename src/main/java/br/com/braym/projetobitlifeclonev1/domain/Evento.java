@@ -10,14 +10,16 @@ import java.util.logging.Logger;
 public class Evento {
     private static final Logger LOGGER = Logger.getLogger(Evento.class.getName());
 
+    private String id;
     private String descricao;
     private List<String> opcoes;
-    private List<Integer> efeitos; // Efeitos para atributo único (caso efeitosMultiplos não seja utilizado)
-    private String atributo;       // Atributo do Personagem a ser afetado
+    private List<Integer> efeitos; // Efeitos correspondentes às opções
+    private String atributo;    
     // Novo campo para suportar múltiplos efeitos (atributo -> valor)
     private Map<String, Integer> efeitosMultiplos;
 
-    public Evento(String descricao, List<String> opcoes, List<Integer> efeitos, String atributo) {
+    public Evento(String id, String descricao, List<String> opcoes, List<Integer> efeitos, String atributo) {
+        this.id = id;
         this.descricao = descricao;
         this.opcoes = opcoes;
         this.efeitos = efeitos;
@@ -31,6 +33,10 @@ public class Evento {
     }
 
     // Getters e Setters
+    
+    public String getId() {
+        return id;
+    }
     public String getDescricao() {
         return descricao;
     }

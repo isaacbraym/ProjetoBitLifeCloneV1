@@ -1,0 +1,78 @@
+[
+  {
+    "id": "001",
+    "descricao": "Ao iniciar sua carreira, você sente o peso e a empolgação de um novo começo.",
+    "periodo": "juventude",
+    "opcoes": [
+      {
+        "texto": "Se dedicar intensamente e buscar crescimento",
+        "retornoNarrativo": "Seu esforço se traduz em estabilidade financeira e reconhecimento.",
+        "efeitos": { "financas": 5 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Adiar responsabilidades e curtir o momento",
+        "retornoNarrativo": "A despreocupação gera momentos divertidos, mas com desafios no futuro.",
+        "efeitos": { "financas": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "descricao": "Um relacionamento amoroso sério começa a se formar, trazendo muita emoção.",
+    "periodo": "juventude",
+    "opcoes": [
+      {
+        "texto": "Investir com carinho e atenção",
+        "retornoNarrativo": "A dedicação fortalece o vínculo e eleva seu bem-estar.",
+        "efeitos": { "felicidade": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Manter certa distância para preservar sua liberdade",
+        "retornoNarrativo": "A cautela protege sua individualidade, mas diminui a intensidade emocional.",
+        "efeitos": { "felicidade": -1 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "descricao": "Morar sozinho pela primeira vez o obriga a cuidar de si mesmo de maneira intensa.",
+    "periodo": "juventude",
+    "opcoes": [
+      {
+        "texto": "Organizar sua vida com disciplina",
+        "retornoNarrativo": "A responsabilidade traz crescimento pessoal e saúde equilibrada.",
+        "efeitos": { "saude": 3 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Sentir a solidão pesar e descuidar da rotina",
+        "retornoNarrativo": "A desorganização afeta seu bem-estar e deixa saudades do convívio familiar.",
+        "efeitos": { "saude": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "descricao": "Descobrir um hobby novo traz momentos de relaxamento e criatividade após dias intensos.",
+    "periodo": "juventude",
+    "opcoes": [
+      {
+        "texto": "Dedicar-se com afinco ao hobby",
+        "retornoNarrativo": "O hobby se torna uma fonte de inspiração e equilíbrio mental.",
+        "efeitos": { "inteligencia": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Abandonar o hobby por falta de tempo",
+        "retornoNarrativo": "A perda do interesse causa uma leve frustração, afetando seu humor.",
+        "efeitos": { "felicidade": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  }
+]

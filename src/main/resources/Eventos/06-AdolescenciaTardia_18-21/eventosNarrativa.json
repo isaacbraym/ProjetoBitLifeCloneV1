@@ -1,0 +1,78 @@
+[
+  {
+    "id": "001",
+    "descricao": "Seu primeiro emprego traz desafios, mas também a sensação de estar ingressando no mundo adulto.",
+    "periodo": "adolescencia_tardia",
+    "opcoes": [
+      {
+        "texto": "Abraçar o desafio com determinação",
+        "retornoNarrativo": "A iniciativa fortalece sua independência financeira.",
+        "efeitos": { "financas": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Sentir insegurança e hesitar",
+        "retornoNarrativo": "A dúvida prejudica sua performance, afetando seu humor.",
+        "efeitos": { "felicidade": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "002",
+    "descricao": "A decisão entre a faculdade e outras oportunidades pesa em seu futuro.",
+    "periodo": "adolescencia_tardia",
+    "opcoes": [
+      {
+        "texto": "Optar pela universidade e investir no conhecimento",
+        "retornoNarrativo": "A escolha acadêmica abre portas para uma carreira promissora.",
+        "efeitos": { "inteligencia": 3 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Explorar alternativas e ingressar no mercado de trabalho",
+        "retornoNarrativo": "A experiência prática gera aprendizado, mas com riscos financeiros.",
+        "efeitos": { "financas": 2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "003",
+    "descricao": "A mudança para uma nova cidade traz desafios de adaptação e descoberta.",
+    "periodo": "adolescencia_tardia",
+    "opcoes": [
+      {
+        "texto": "Abraçar a mudança com otimismo",
+        "retornoNarrativo": "A nova experiência amplia sua visão de mundo e eleva a felicidade.",
+        "efeitos": { "felicidade": 4 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Sentir saudade e ter dificuldades de adaptação",
+        "retornoNarrativo": "A adaptação lenta gera desconforto, impactando seu humor.",
+        "efeitos": { "felicidade": -2 },
+        "idProximoEvento": null
+      }
+    ]
+  },
+  {
+    "id": "004",
+    "descricao": "A pressão pela independência financeira o ensina a gerenciar o orçamento.",
+    "periodo": "adolescencia_tardia",
+    "opcoes": [
+      {
+        "texto": "Controlar as finanças com sabedoria",
+        "retornoNarrativo": "A disciplina financeira fortalece seu futuro.",
+        "efeitos": { "financas": 5 },
+        "idProximoEvento": null
+      },
+      {
+        "texto": "Gastar impulsivamente e aprender com os erros",
+        "retornoNarrativo": "A imprudência gera dificuldades, mas traz lições importantes.",
+        "efeitos": { "financas": -3 },
+        "idProximoEvento": null
+      }
+    ]
+  }
+]
