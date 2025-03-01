@@ -1,18 +1,17 @@
 [
   {
     "id": "001",
-    "descricao": "Ao iniciar sua carreira, você sente o peso e a empolgação de um novo começo.",
     "periodo": "juventude",
     "opcoes": [
       {
-        "texto": "Se dedicar intensamente e buscar crescimento",
-        "retornoNarrativo": "Seu esforço se traduz em estabilidade financeira e reconhecimento.",
+        "texto": "Me dedicar intensamente e buscar crescimento",
+        "retornoNarrativo": "Eu me dediquei intensamente e busquei crescimento, o que me trouxe estabilidade financeira e reconhecimento.",
         "efeitos": { "financas": 5 },
         "idProximoEvento": null
       },
       {
         "texto": "Adiar responsabilidades e curtir o momento",
-        "retornoNarrativo": "A despreocupação gera momentos divertidos, mas com desafios no futuro.",
+        "retornoNarrativo": "Eu adiei minhas responsabilidades e curti o momento, embora isso tenha gerado desafios no futuro.",
         "efeitos": { "financas": -2 },
         "idProximoEvento": null
       }
@@ -20,18 +19,17 @@
   },
   {
     "id": "002",
-    "descricao": "Um relacionamento amoroso sério começa a se formar, trazendo muita emoção.",
     "periodo": "juventude",
     "opcoes": [
       {
-        "texto": "Investir com carinho e atenção",
-        "retornoNarrativo": "A dedicação fortalece o vínculo e eleva seu bem-estar.",
+        "texto": "Investir com carinho e atenção no relacionamento",
+        "retornoNarrativo": "Eu investi com carinho no relacionamento, fortalecendo o vínculo e elevando meu bem-estar.",
         "efeitos": { "felicidade": 4 },
         "idProximoEvento": null
       },
       {
-        "texto": "Manter certa distância para preservar sua liberdade",
-        "retornoNarrativo": "A cautela protege sua individualidade, mas diminui a intensidade emocional.",
+        "texto": "Manter certa distância para preservar minha liberdade",
+        "retornoNarrativo": "Eu mantive certa distância para preservar minha liberdade, o que diminuiu a intensidade emocional.",
         "efeitos": { "felicidade": -1 },
         "idProximoEvento": null
       }
@@ -39,18 +37,17 @@
   },
   {
     "id": "003",
-    "descricao": "Morar sozinho pela primeira vez o obriga a cuidar de si mesmo de maneira intensa.",
     "periodo": "juventude",
     "opcoes": [
       {
-        "texto": "Organizar sua vida com disciplina",
-        "retornoNarrativo": "A responsabilidade traz crescimento pessoal e saúde equilibrada.",
+        "texto": "Organizar minha vida com disciplina",
+        "retornoNarrativo": "Eu organizei minha vida com disciplina, o que trouxe crescimento pessoal e melhorou minha saúde.",
         "efeitos": { "saude": 3 },
         "idProximoEvento": null
       },
       {
         "texto": "Sentir a solidão pesar e descuidar da rotina",
-        "retornoNarrativo": "A desorganização afeta seu bem-estar e deixa saudades do convívio familiar.",
+        "retornoNarrativo": "Eu senti a solidão pesar e descuidei da minha rotina, afetando negativamente minha saúde.",
         "efeitos": { "saude": -2 },
         "idProximoEvento": null
       }
@@ -58,18 +55,17 @@
   },
   {
     "id": "004",
-    "descricao": "Descobrir um hobby novo traz momentos de relaxamento e criatividade após dias intensos.",
     "periodo": "juventude",
     "opcoes": [
       {
-        "texto": "Dedicar-se com afinco ao hobby",
-        "retornoNarrativo": "O hobby se torna uma fonte de inspiração e equilíbrio mental.",
+        "texto": "Me dedicar com afinco ao hobby",
+        "retornoNarrativo": "Eu me dediquei com afinco ao meu hobby, que se tornou uma fonte de inspiração e equilíbrio mental.",
         "efeitos": { "inteligencia": 4 },
         "idProximoEvento": null
       },
       {
         "texto": "Abandonar o hobby por falta de tempo",
-        "retornoNarrativo": "A perda do interesse causa uma leve frustração, afetando seu humor.",
+        "retornoNarrativo": "Eu abandonei meu hobby por falta de tempo, o que causou uma leve frustração e afetou meu humor.",
         "efeitos": { "felicidade": -2 },
         "idProximoEvento": null
       }

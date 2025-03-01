@@ -1,18 +1,17 @@
 [
   {
     "id": "001",
-    "descricao": "As limitações físicas começam a afetar sua autonomia, exigindo mais apoio familiar.",
     "periodo": "idoso_maduro",
     "opcoes": [
       {
-        "texto": "Aceitar as limitações com serenidade",
-        "retornoNarrativo": "A aceitação traz paz interior e fortalece os laços com a família.",
+        "texto": "Aceitar com serenidade",
+        "retornoNarrativo": "Eu aceitei minhas limitações com serenidade, o que me trouxe paz interior e fortaleceu os laços com minha família.",
         "efeitos": { "saude": 3 },
         "idProximoEvento": null
       },
       {
-        "texto": "Lutar contra as limitações e se desgastar",
-        "retornoNarrativo": "O esforço excessivo gera frustração e prejudica sua saúde.",
+        "texto": "Lutar contra as limitações",
+        "retornoNarrativo": "Eu lutei contra minhas limitações, mas isso acabou gerando frustração e prejudicando minha saúde.",
         "efeitos": { "saude": -2 },
         "idProximoEvento": null
       }
@@ -20,18 +19,17 @@
   },
   {
     "id": "002",
-    "descricao": "Problemas crônicos de saúde exigem cuidados constantes e disciplina nos tratamentos.",
     "periodo": "idoso_maduro",
     "opcoes": [
       {
         "texto": "Seguir rigorosamente os tratamentos",
-        "retornoNarrativo": "O comprometimento melhora sua qualidade de vida e estabilidade.",
+        "retornoNarrativo": "Eu segui rigorosamente meus tratamentos, o que melhorou minha qualidade de vida e estabilidade.",
         "efeitos": { "saude": 4 },
         "idProximoEvento": null
       },
       {
-        "texto": "Negligenciar os cuidados e arriscar complicações",
-        "retornoNarrativo": "A negligência acarreta agravamento dos sintomas e desconforto.",
+        "texto": "Negligenciar os cuidados",
+        "retornoNarrativo": "Eu negligenciei os cuidados, agravando meus sintomas e causando desconforto.",
         "efeitos": { "saude": -3 },
         "idProximoEvento": null
       }
@@ -39,18 +37,17 @@
   },
   {
     "id": "003",
-    "descricao": "A busca por socialização se torna fundamental para evitar a solidão e depressão.",
     "periodo": "idoso_maduro",
     "opcoes": [
       {
-        "texto": "Participar de grupos e atividades sociais",
-        "retornoNarrativo": "A interação social eleva seu ânimo e mantém a mente ativa.",
+        "texto": "Participar de grupos e atividades",
+        "retornoNarrativo": "Eu participei de grupos e atividades, elevando meu ânimo e mantendo minha mente ativa.",
         "efeitos": { "felicidade": 4 },
         "idProximoEvento": null
       },
       {
-        "texto": "Ficar isolado e se fechar emocionalmente",
-        "retornoNarrativo": "O isolamento gera sentimentos de tristeza e solidão.",
+        "texto": "Ficar isolado e me fechar emocionalmente",
+        "retornoNarrativo": "Eu me isolei e me fechei emocionalmente, o que me trouxe sentimentos de tristeza e solidão.",
         "efeitos": { "felicidade": -2 },
         "idProximoEvento": null
       }
@@ -58,18 +55,17 @@
   },
   {
     "id": "004",
-    "descricao": "Refletir sobre a vida e o legado a ser deixado traz uma sensação de missão.",
     "periodo": "idoso_maduro",
     "opcoes": [
       {
-        "texto": "Compartilhar suas memórias e lições com os jovens",
-        "retornoNarrativo": "A transmissão de sabedoria fortalece sua autoestima e legado.",
+        "texto": "Compartilhar minhas memórias e lições",
+        "retornoNarrativo": "Eu compartilhei minhas memórias e lições, fortalecendo minha autoestima e valorizando minha trajetória.",
         "efeitos": { "inteligencia": 5 },
         "idProximoEvento": null
       },
       {
-        "texto": "Guardar tudo para si, sem compartilhar",
-        "retornoNarrativo": "A introspecção excessiva pode levar a sentimentos de arrependimento.",
+        "texto": "Guardar tudo para mim",
+        "retornoNarrativo": "Eu guardei tudo para mim, e essa introspecção excessiva me levou a sentimentos de arrependimento.",
         "efeitos": { "inteligencia": -1 },
         "idProximoEvento": null
       }

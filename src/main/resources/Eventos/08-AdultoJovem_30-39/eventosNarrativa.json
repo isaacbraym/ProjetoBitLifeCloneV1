@@ -1,18 +1,17 @@
 [
   {
     "id": "001",
-    "descricao": "Consolidar a carreira traz a satisfação de ver os frutos do seu trabalho.",
     "periodo": "adulto_jovem",
     "opcoes": [
       {
         "texto": "Continuar investindo e crescer profissionalmente",
-        "retornoNarrativo": "Sua visão de futuro resulta em estabilidade financeira e orgulho pessoal.",
+        "retornoNarrativo": "Eu continuei investindo e cresci profissionalmente, o que me trouxe estabilidade financeira e orgulho.",
         "efeitos": { "financas": 5 },
         "idProximoEvento": null
       },
       {
         "texto": "Ficar complacente e parar de buscar melhorias",
-        "retornoNarrativo": "A estagnação diminui seu dinamismo, afetando seu progresso.",
+        "retornoNarrativo": "Eu fiquei complacente e parei de buscar melhorias, diminuindo meu dinamismo e prejudicando meu progresso.",
         "efeitos": { "financas": -3 },
         "idProximoEvento": null
       }
@@ -20,18 +19,17 @@
   },
   {
     "id": "002",
-    "descricao": "A formação de uma família traz momentos de intensa alegria e desafios diários.",
     "periodo": "adulto_jovem",
     "opcoes": [
       {
-        "texto": "Abraçar a paternidade/maternidade com dedicação",
-        "retornoNarrativo": "O amor familiar aumenta sua felicidade e senso de responsabilidade.",
+        "texto": "Abraçar essa nova fase com entusiasmo",
+        "retornoNarrativo": "Eu abracei essa nova fase com entusiasmo, o que aumentou minha felicidade e meu senso de responsabilidade.",
         "efeitos": { "felicidade": 4 },
         "idProximoEvento": null
       },
       {
-        "texto": "Sentir-se sobrecarregado com as responsabilidades",
-        "retornoNarrativo": "A pressão causa desgaste emocional e afeta seu humor.",
+        "texto": "Sentir insegurança diante das responsabilidades",
+        "retornoNarrativo": "Eu senti insegurança diante das responsabilidades, afetando meu bem-estar.",
         "efeitos": { "felicidade": -2 },
         "idProximoEvento": null
       }
@@ -39,18 +37,17 @@
   },
   {
     "id": "003",
-    "descricao": "Lutar para equilibrar trabalho e vida pessoal se torna uma batalha diária.",
     "periodo": "adulto_jovem",
     "opcoes": [
       {
-        "texto": "Buscar um equilíbrio saudável entre carreira e lazer",
-        "retornoNarrativo": "O equilíbrio melhora sua saúde e qualidade de vida.",
+        "texto": "Buscar um equilíbrio saudável",
+        "retornoNarrativo": "Eu busquei um equilíbrio saudável, o que melhorou minha saúde e qualidade de vida.",
         "efeitos": { "saude": 3 },
         "idProximoEvento": null
       },
       {
-        "texto": "Priorizar o trabalho em demasia e negligenciar a vida pessoal",
-        "retornoNarrativo": "O excesso de trabalho prejudica seu bem-estar e diminui a felicidade.",
+        "texto": "Priorizar o trabalho em demasia",
+        "retornoNarrativo": "Eu priorizei o trabalho em demasia, prejudicando meu bem-estar e diminuindo minha saúde.",
         "efeitos": { "saude": -3 },
         "idProximoEvento": null
       }
@@ -58,18 +55,17 @@
   },
   {
     "id": "004",
-    "descricao": "Investir para o futuro se torna uma decisão crucial para sua estabilidade.",
     "periodo": "adulto_jovem",
     "opcoes": [
       {
         "texto": "Planejar e economizar com cautela",
-        "retornoNarrativo": "A disciplina financeira garante segurança e tranquilidade.",
+        "retornoNarrativo": "Eu planejei e economizei com cautela, garantindo um futuro financeiro seguro e tranquilidade.",
         "efeitos": { "financas": 5 },
         "idProximoEvento": null
       },
       {
-        "texto": "Gastar sem controle, comprometendo o futuro",
-        "retornoNarrativo": "A imprudência financeira gera problemas e reduz sua estabilidade.",
+        "texto": "Gastar sem controle, comprometendo meu futuro",
+        "retornoNarrativo": "Eu gastei sem controle, o que comprometeu meu futuro financeiro.",
         "efeitos": { "financas": -3 },
         "idProximoEvento": null
       }

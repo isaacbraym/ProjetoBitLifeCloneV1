@@ -1,18 +1,17 @@
 [
   {
     "id": "001",
-    "descricao": "Você percebe as mudanças no seu corpo e sente uma mistura de orgulho e insegurança.",
     "periodo": "adolescencia_inicial",
     "opcoes": [
       {
         "texto": "Abraçar as mudanças com confiança",
-        "retornoNarrativo": "A aceitação fortalece sua saúde emocional.",
+        "retornoNarrativo": "Eu abracei as mudanças com confiança, o que fortaleceu minha saúde emocional.",
         "efeitos": { "saude": 3 },
         "idProximoEvento": null
       },
       {
-        "texto": "Ficar preocupado e se fechar",
-        "retornoNarrativo": "A insegurança gera tensão, afetando seu bem-estar.",
+        "texto": "Ficar preocupado e me fechar",
+        "retornoNarrativo": "Eu fiquei preocupado e me fechei, e minha insegurança gerou tensão, afetando meu bem-estar.",
         "efeitos": { "felicidade": -2 },
         "idProximoEvento": null
       }
@@ -20,18 +19,17 @@
   },
   {
     "id": "002",
-    "descricao": "Seu primeiro crush desperta emoções intensas, confundindo seu coração.",
     "periodo": "adolescencia_inicial",
     "opcoes": [
       {
-        "texto": "Expressar seus sentimentos abertamente",
-        "retornoNarrativo": "A vulnerabilidade traz crescimento emocional e conexão.",
+        "texto": "Expressar meus sentimentos abertamente",
+        "retornoNarrativo": "Eu expressei meus sentimentos abertamente, promovendo crescimento emocional e conexão.",
         "efeitos": { "felicidade": 4 },
         "idProximoEvento": null
       },
       {
-        "texto": "Manter os sentimentos em segredo",
-        "retornoNarrativo": "A reserva pode proteger, mas também gera dúvidas internas.",
+        "texto": "Manter meus sentimentos em segredo",
+        "retornoNarrativo": "Eu mantive meus sentimentos em segredo, o que me protegeu, mas também gerou dúvidas internas.",
         "efeitos": { "inteligencia": 1 },
         "idProximoEvento": null
       }
@@ -39,18 +37,17 @@
   },
   {
     "id": "003",
-    "descricao": "Descobre um novo esporte que desperta sua paixão e lhe dá um senso de pertencimento.",
     "periodo": "adolescencia_inicial",
     "opcoes": [
       {
         "texto": "Investir com entusiasmo no esporte",
-        "retornoNarrativo": "A dedicação fortalece sua saúde e espírito competitivo.",
+        "retornoNarrativo": "Eu investi com entusiasmo no esporte, fortalecendo minha saúde e espírito competitivo.",
         "efeitos": { "saude": 3 },
         "idProximoEvento": null
       },
       {
-        "texto": "Ignorar e se concentrar em estudos",
-        "retornoNarrativo": "A escolha acadêmica melhora seu foco, mas deixa de lado a socialização.",
+        "texto": "Ignorar e me concentrar em estudos",
+        "retornoNarrativo": "Eu ignorei o esporte e me concentrei em meus estudos, melhorando meu foco, mas sacrificando a socialização.",
         "efeitos": { "inteligencia": 2 },
         "idProximoEvento": null
       }
@@ -58,18 +55,17 @@
   },
   {
     "id": "004",
-    "descricao": "Um leve conflito com os pais obriga você a aprender o valor do diálogo.",
     "periodo": "adolescencia_inicial",
     "opcoes": [
       {
         "texto": "Dialogar calmamente para resolver o impasse",
-        "retornoNarrativo": "A comunicação fortalece os laços familiares e sua maturidade.",
+        "retornoNarrativo": "Eu dialoguei calmamente para resolver o impasse, fortalecendo os laços com minha família e minha maturidade.",
         "efeitos": { "carisma": 3 },
         "idProximoEvento": null
       },
       {
-        "texto": "Rebeldar-se impulsivamente",
-        "retornoNarrativo": "A atitude impulsiva gera tensão e prejudica seu humor.",
+        "texto": "Rebeldar-me impulsivamente",
+        "retornoNarrativo": "Eu me rebelei impulsivamente, o que gerou tensão e prejudicou meu humor.",
         "efeitos": { "felicidade": -3 },
         "idProximoEvento": null
       }

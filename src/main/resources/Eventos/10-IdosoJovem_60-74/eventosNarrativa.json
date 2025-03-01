@@ -1,18 +1,17 @@
 [
   {
     "id": "001",
-    "descricao": "A aposentadoria traz um novo ritmo e a chance de redescobrir prazeres simples.",
     "periodo": "idoso_jovem",
     "opcoes": [
       {
         "texto": "Abraçar a aposentadoria com gratidão",
-        "retornoNarrativo": "A aceitação melhora seu humor e reforça a estabilidade emocional.",
+        "retornoNarrativo": "Eu abracei minha aposentadoria com gratidão, encontrando tranquilidade e renovando os laços com minha família.",
         "efeitos": { "felicidade": 4 },
         "idProximoEvento": null
       },
       {
-        "texto": "Sentir falta da antiga rotina e se lamentar",
-        "retornoNarrativo": "A nostalgia diminui sua satisfação e gera um leve abatimento.",
+        "texto": "Sentir falta da antiga rotina",
+        "retornoNarrativo": "Eu senti falta da minha antiga rotina, o que afetou meu ânimo.",
         "efeitos": { "felicidade": -2 },
         "idProximoEvento": null
       }
@@ -20,18 +19,17 @@
   },
   {
     "id": "002",
-    "descricao": "Você descobre um novo hobby que reaviva sua energia e mantém sua mente ativa.",
     "periodo": "idoso_jovem",
     "opcoes": [
       {
-        "texto": "Investir tempo e aprender algo novo",
-        "retornoNarrativo": "O engajamento com o hobby estimula sua inteligência e vitalidade.",
+        "texto": "Investir tempo no meu hobby",
+        "retornoNarrativo": "Eu investi tempo no meu hobby, reavivando minha energia e mantendo minha mente ativa.",
         "efeitos": { "inteligencia": 3 },
         "idProximoEvento": null
       },
       {
         "texto": "Perder o interesse com o tempo",
-        "retornoNarrativo": "A desistência diminui sua motivação e afeta o ânimo.",
+        "retornoNarrativo": "Eu acabei perdendo o interesse, o que afetou minha motivação e bem-estar.",
         "efeitos": { "felicidade": -1 },
         "idProximoEvento": null
       }
@@ -39,18 +37,17 @@
   },
   {
     "id": "003",
-    "descricao": "Desafios para manter a saúde fazem você repensar a intensidade das atividades físicas.",
     "periodo": "idoso_jovem",
     "opcoes": [
       {
-        "texto": "Adotar atividades leves e regulares",
-        "retornoNarrativo": "O cuidado com o corpo melhora sua saúde e disposição.",
+        "texto": "Adotar atividades leves",
+        "retornoNarrativo": "Eu adotei atividades leves, o que melhorou minha saúde e disposição.",
         "efeitos": { "saude": 4 },
         "idProximoEvento": null
       },
       {
-        "texto": "Abandonar a prática física por desânimo",
-        "retornoNarrativo": "A inatividade prejudica sua saúde e gera declínio gradual.",
+        "texto": "Abandonar a prática física",
+        "retornoNarrativo": "Eu abandonei a prática física, e isso prejudicou gradativamente minha saúde.",
         "efeitos": { "saude": -3 },
         "idProximoEvento": null
       }
@@ -58,18 +55,17 @@
   },
   {
     "id": "004",
-    "descricao": "Momentos com os netos e a família trazem calor humano e renovam seus laços afetivos.",
     "periodo": "idoso_jovem",
     "opcoes": [
       {
-        "texto": "Aproveitar cada instante com alegria",
-        "retornoNarrativo": "A proximidade familiar aumenta seu carisma e bem-estar.",
+        "texto": "Aproveitar cada instante com meus netos",
+        "retornoNarrativo": "Eu aproveitei cada instante com meus netos, o que fortaleceu meu carisma e me trouxe muita alegria.",
         "efeitos": { "carisma": 5 },
         "idProximoEvento": null
       },
       {
-        "texto": "Manter distância por insegurança",
-        "retornoNarrativo": "O distanciamento afeta seus laços e diminui o ânimo.",
+        "texto": "Manter certa distância emocional",
+        "retornoNarrativo": "Eu mantive certa distância emocional, o que afetou negativamente a qualidade dos meus laços familiares.",
         "efeitos": { "carisma": -1 },
         "idProximoEvento": null
       }

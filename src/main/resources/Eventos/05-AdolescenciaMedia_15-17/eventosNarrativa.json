@@ -1,18 +1,17 @@
 [
   {
     "id": "001",
-    "descricao": "Você questiona as crenças familiares e busca novas perspectivas para sua vida.",
     "periodo": "adolescencia_media",
     "opcoes": [
       {
         "texto": "Explorar novas ideias com curiosidade",
-        "retornoNarrativo": "A mente aberta amplia seus horizontes, fortalecendo sua inteligência.",
+        "retornoNarrativo": "Eu explorei novas ideias com curiosidade, abrindo minha mente e fortalecendo minha inteligência.",
         "efeitos": { "inteligencia": 4 },
         "idProximoEvento": null
       },
       {
         "texto": "Manter a tradição sem questionamentos",
-        "retornoNarrativo": "A rigidez limita seu crescimento, causando certo desgaste emocional.",
+        "retornoNarrativo": "Eu optei por manter a tradição, o que limitou meu crescimento e causou desgaste emocional.",
         "efeitos": { "felicidade": -2 },
         "idProximoEvento": null
       }
@@ -20,18 +19,17 @@
   },
   {
     "id": "002",
-    "descricao": "A liberdade de sair com amigos desperta a vontade de viver intensamente.",
     "periodo": "adolescencia_media",
     "opcoes": [
       {
         "texto": "Aproveitar cada oportunidade de diversão",
-        "retornoNarrativo": "O entusiasmo contagia, elevando seu carisma.",
+        "retornoNarrativo": "Eu aproveitei cada oportunidade de diversão, e meu entusiasmo elevou meu carisma.",
         "efeitos": { "carisma": 5 },
         "idProximoEvento": null
       },
       {
         "texto": "Ser cauteloso e evitar excessos",
-        "retornoNarrativo": "A prudência protege, mas limita a experiência emocional.",
+        "retornoNarrativo": "Eu fui cauteloso e evitei excessos, protegendo minha experiência emocional, embora com entusiasmo limitado.",
         "efeitos": { "felicidade": 1 },
         "idProximoEvento": null
       }
@@ -39,18 +37,17 @@
   },
   {
     "id": "003",
-    "descricao": "Um desentendimento com um amigo próximo coloca à prova sua habilidade de resolver conflitos.",
     "periodo": "adolescencia_media",
     "opcoes": [
       {
         "texto": "Conversar e buscar entendimento",
-        "retornoNarrativo": "A empatia fortalece a amizade e seu equilíbrio emocional.",
+        "retornoNarrativo": "Eu conversei e busquei entendimento, o que fortaleceu minha amizade e equilíbrio emocional.",
         "efeitos": { "felicidade": 3 },
         "idProximoEvento": null
       },
       {
-        "texto": "Evitar o confronto e se isolar",
-        "retornoNarrativo": "O isolamento causa um pequeno abalo no seu ânimo.",
+        "texto": "Evitar o confronto e me isolar",
+        "retornoNarrativo": "Eu evitei o confronto e me isolei, causando um leve abalo no meu ânimo.",
         "efeitos": { "carisma": -2 },
         "idProximoEvento": null
       }
@@ -58,18 +55,17 @@
   },
   {
     "id": "004",
-    "descricao": "Um desafio escolar exigente testa sua disciplina e organização.",
     "periodo": "adolescencia_media",
     "opcoes": [
       {
         "texto": "Estudar com dedicação e foco",
-        "retornoNarrativo": "O esforço nos estudos eleva sua inteligência e autoconfiança.",
+        "retornoNarrativo": "Eu estudei com dedicação e foco, o que elevou minha inteligência e autoconfiança.",
         "efeitos": { "inteligencia": 5 },
         "idProximoEvento": null
       },
       {
-        "texto": "Procrastinar e arriscar o desempenho",
-        "retornoNarrativo": "A procrastinação causa estresse e compromete seu desempenho.",
+        "texto": "Procrastinar e arriscar meu desempenho",
+        "retornoNarrativo": "Eu procrastinei e arrisquei meu desempenho, o que causou estresse e comprometeu meus resultados.",
         "efeitos": { "felicidade": -3 },
         "idProximoEvento": null
       }

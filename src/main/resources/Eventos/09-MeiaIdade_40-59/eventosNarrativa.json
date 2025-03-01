@@ -1,18 +1,17 @@
 [
   {
     "id": "001",
-    "descricao": "Você reavalia sua carreira e decide buscar novos horizontes para reencontrar seu propósito.",
     "periodo": "meia_idade",
     "opcoes": [
       {
         "texto": "Investir em autoconhecimento e mudanças",
-        "retornoNarrativo": "A reflexão traz clareza e eleva sua inteligência emocional.",
+        "retornoNarrativo": "Eu investi em autoconhecimento e mudanças, e essa reflexão trouxe clareza, elevando minha inteligência emocional.",
         "efeitos": { "inteligencia": 4 },
         "idProximoEvento": null
       },
       {
         "texto": "Manter a rotina sem questionar",
-        "retornoNarrativo": "A inércia impede seu crescimento, causando um leve desânimo.",
+        "retornoNarrativo": "Eu mantive a rotina sem questionar, o que impediu meu crescimento e causou um leve desânimo.",
         "efeitos": { "felicidade": -1 },
         "idProximoEvento": null
       }
@@ -20,18 +19,17 @@
   },
   {
     "id": "002",
-    "descricao": "Sinais de crise da meia-idade despertam dúvidas e insatisfações.",
     "periodo": "meia_idade",
     "opcoes": [
       {
         "texto": "Buscar ajuda e refletir sobre a vida",
-        "retornoNarrativo": "O autoconhecimento melhora seu equilíbrio emocional.",
+        "retornoNarrativo": "Eu busquei ajuda e refleti sobre a vida, melhorando meu equilíbrio emocional.",
         "efeitos": { "felicidade": 3 },
         "idProximoEvento": null
       },
       {
         "texto": "Ignorar os sentimentos e seguir a rotina",
-        "retornoNarrativo": "A negação gera desconforto e baixa satisfação pessoal.",
+        "retornoNarrativo": "Eu ignorei meus sentimentos e segui a rotina, o que gerou desconforto e baixa satisfação pessoal.",
         "efeitos": { "felicidade": -2 },
         "idProximoEvento": null
       }
@@ -39,18 +37,17 @@
   },
   {
     "id": "003",
-    "descricao": "Você adota um novo estilo de vida focado na saúde, mudando hábitos antigos.",
     "periodo": "meia_idade",
     "opcoes": [
       {
         "texto": "Praticar exercícios e melhorar a dieta",
-        "retornoNarrativo": "A mudança fortalece sua saúde e vitalidade.",
+        "retornoNarrativo": "Eu pratiquei exercícios e melhorei minha dieta, fortalecendo minha saúde e vitalidade.",
         "efeitos": { "saude": 5 },
         "idProximoEvento": null
       },
       {
         "texto": "Manter hábitos antigos e resistir à mudança",
-        "retornoNarrativo": "A resistência prejudica sua saúde e gera desgaste.",
+        "retornoNarrativo": "Eu mantive meus hábitos antigos e resisti à mudança, o que prejudicou minha saúde e gerou desgaste.",
         "efeitos": { "saude": -3 },
         "idProximoEvento": null
       }
@@ -58,18 +55,17 @@
   },
   {
     "id": "004",
-    "descricao": "Desafios nos relacionamentos familiares exigem uma postura de diálogo e compreensão.",
     "periodo": "meia_idade",
     "opcoes": [
       {
         "texto": "Dialogar abertamente e buscar soluções",
-        "retornoNarrativo": "A comunicação melhora os laços afetivos e aumenta seu carisma.",
+        "retornoNarrativo": "Eu dialoguei abertamente e busquei soluções, melhorando os laços com as pessoas ao meu redor e aumentando meu carisma.",
         "efeitos": { "carisma": 3 },
         "idProximoEvento": null
       },
       {
-        "texto": "Evitar conflitos e se isolar emocionalmente",
-        "retornoNarrativo": "A evitação reduz a conexão com os outros e diminui a satisfação.",
+        "texto": "Evitar conflitos e me isolar emocionalmente",
+        "retornoNarrativo": "Eu evitei conflitos e me isolei, o que reduziu minha conexão com os outros e diminuiu minha satisfação.",
         "efeitos": { "carisma": 0 },
         "idProximoEvento": null
       }

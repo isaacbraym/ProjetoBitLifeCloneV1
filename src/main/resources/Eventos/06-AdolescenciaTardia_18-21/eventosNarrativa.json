@@ -1,18 +1,17 @@
 [
   {
     "id": "001",
-    "descricao": "Seu primeiro emprego traz desafios, mas também a sensação de estar ingressando no mundo adulto.",
     "periodo": "adolescencia_tardia",
     "opcoes": [
       {
         "texto": "Abraçar o desafio com determinação",
-        "retornoNarrativo": "A iniciativa fortalece sua independência financeira.",
+        "retornoNarrativo": "Eu abracei o desafio com determinação, fortalecendo minha independência financeira.",
         "efeitos": { "financas": 4 },
         "idProximoEvento": null
       },
       {
         "texto": "Sentir insegurança e hesitar",
-        "retornoNarrativo": "A dúvida prejudica sua performance, afetando seu humor.",
+        "retornoNarrativo": "Eu senti insegurança e hesitei, o que prejudicou minha performance e afetou meu humor.",
         "efeitos": { "felicidade": -2 },
         "idProximoEvento": null
       }
@@ -20,18 +19,17 @@
   },
   {
     "id": "002",
-    "descricao": "A decisão entre a faculdade e outras oportunidades pesa em seu futuro.",
     "periodo": "adolescencia_tardia",
     "opcoes": [
       {
         "texto": "Optar pela universidade e investir no conhecimento",
-        "retornoNarrativo": "A escolha acadêmica abre portas para uma carreira promissora.",
+        "retornoNarrativo": "Eu optei pela universidade e investi no conhecimento, abrindo portas para uma carreira promissora.",
         "efeitos": { "inteligencia": 3 },
         "idProximoEvento": null
       },
       {
         "texto": "Explorar alternativas e ingressar no mercado de trabalho",
-        "retornoNarrativo": "A experiência prática gera aprendizado, mas com riscos financeiros.",
+        "retornoNarrativo": "Eu explorei alternativas e ingressei no mercado de trabalho, o que me proporcionou aprendizado, apesar dos riscos financeiros.",
         "efeitos": { "financas": 2 },
         "idProximoEvento": null
       }
@@ -39,18 +37,17 @@
   },
   {
     "id": "003",
-    "descricao": "A mudança para uma nova cidade traz desafios de adaptação e descoberta.",
     "periodo": "adolescencia_tardia",
     "opcoes": [
       {
         "texto": "Abraçar a mudança com otimismo",
-        "retornoNarrativo": "A nova experiência amplia sua visão de mundo e eleva a felicidade.",
+        "retornoNarrativo": "Eu abracei a mudança com otimismo, ampliando minha visão de mundo e elevando minha felicidade.",
         "efeitos": { "felicidade": 4 },
         "idProximoEvento": null
       },
       {
         "texto": "Sentir saudade e ter dificuldades de adaptação",
-        "retornoNarrativo": "A adaptação lenta gera desconforto, impactando seu humor.",
+        "retornoNarrativo": "Eu senti saudade e tive dificuldades de adaptação, o que impactou negativamente meu humor.",
         "efeitos": { "felicidade": -2 },
         "idProximoEvento": null
       }
@@ -58,18 +55,17 @@
   },
   {
     "id": "004",
-    "descricao": "A pressão pela independência financeira o ensina a gerenciar o orçamento.",
     "periodo": "adolescencia_tardia",
     "opcoes": [
       {
         "texto": "Controlar as finanças com sabedoria",
-        "retornoNarrativo": "A disciplina financeira fortalece seu futuro.",
+        "retornoNarrativo": "Eu controlei minhas finanças com sabedoria, fortalecendo meu futuro.",
         "efeitos": { "financas": 5 },
         "idProximoEvento": null
       },
       {
         "texto": "Gastar impulsivamente e aprender com os erros",
-        "retornoNarrativo": "A imprudência gera dificuldades, mas traz lições importantes.",
+        "retornoNarrativo": "Eu gastei impulsivamente e aprendi com meus erros, o que me ensinou lições importantes, embora tenha gerado dificuldades.",
         "efeitos": { "financas": -3 },
         "idProximoEvento": null
       }

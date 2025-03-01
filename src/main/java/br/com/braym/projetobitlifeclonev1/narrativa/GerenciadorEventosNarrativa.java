@@ -110,11 +110,14 @@ public class GerenciadorEventosNarrativa {
                 case "inteligencia":
                     personagem.alterarInteligencia(valor);
                     break;
-                // Adicione outros casos conforme necessário
+                case "carisma":
+                    personagem.setCarisma(personagem.getCarisma() + valor);
+                    break;
                 default:
                     System.out.println("Atributo desconhecido: " + atributo);
                     break;
             }
         });
     }
+
 }

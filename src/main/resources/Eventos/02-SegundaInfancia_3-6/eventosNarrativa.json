@@ -1,18 +1,17 @@
 [
   {
     "id": "001",
-    "descricao": "No parque, você corre livremente e sente a brisa, descobrindo a alegria de explorar o mundo.",
     "periodo": "segunda_infancia",
     "opcoes": [
       {
         "texto": "Correr e brincar sem limites",
-        "retornoNarrativo": "Sua energia contagia os amigos, aumentando seu carisma.",
+        "retornoNarrativo": "Eu corri e brinquei sem limites, e minha energia contagiou meus amigos, aumentando meu carisma.",
         "efeitos": { "carisma": 4 },
         "idProximoEvento": null
       },
       {
         "texto": "Ficar sentado e observar as pessoas",
-        "retornoNarrativo": "A introspecção fortalece sua percepção, mas sem grande entusiasmo.",
+        "retornoNarrativo": "Eu fiquei sentado observando as pessoas, e minha introspecção aprimorou minha percepção, mesmo sem grande entusiasmo.",
         "efeitos": { "inteligencia": 2 },
         "idProximoEvento": null
       }
@@ -20,18 +19,17 @@
   },
   {
     "id": "002",
-    "descricao": "Ao ver um arco-íris, você se maravilha com as cores, despertando sua imaginação.",
     "periodo": "segunda_infancia",
     "opcoes": [
       {
-        "texto": "Exclamar de alegria e correr para contar aos pais",
-        "retornoNarrativo": "A empolgação eleva seu humor e fortalece os vínculos familiares.",
+        "texto": "Exclamar de alegria e correr para contar aos meus pais",
+        "retornoNarrativo": "Eu exclamei de alegria e corri para contar aos meus pais, o que elevou meu humor e fortaleceu meus vínculos familiares.",
         "efeitos": { "felicidade": 5 },
         "idProximoEvento": null
       },
       {
         "texto": "Ficar quieto e absorver o momento",
-        "retornoNarrativo": "A reflexão silenciosa aprimora seu senso de observação.",
+        "retornoNarrativo": "Eu fiquei quieto, absorvendo o momento, aprimorando minha observação.",
         "efeitos": { "inteligencia": 3 },
         "idProximoEvento": null
       }
@@ -39,18 +37,17 @@
   },
   {
     "id": "003",
-    "descricao": "Durante uma brincadeira de esconde-esconde, a diversão se mistura com a descoberta de novos amigos.",
     "periodo": "segunda_infancia",
     "opcoes": [
       {
-        "texto": "Gritar de alegria ao se encontrar",
-        "retornoNarrativo": "A felicidade compartilhada aumenta seu carisma.",
+        "texto": "Rir alto e participar",
+        "retornoNarrativo": "Eu ri alto e participei, aumentando meu carisma.",
         "efeitos": { "carisma": 4 },
         "idProximoEvento": null
       },
       {
-        "texto": "Ficar tímido e se esconder mais",
-        "retornoNarrativo": "A timidez diminui a energia social, mas ensina cautela.",
+        "texto": "Ficar tímido",
+        "retornoNarrativo": "Eu fiquei tímido, o que reduziu minha felicidade.",
         "efeitos": { "felicidade": -1 },
         "idProximoEvento": null
       }
@@ -58,18 +55,17 @@
   },
   {
     "id": "004",
-    "descricao": "Você faz seu primeiro desenho, criando um universo colorido que encanta todos ao redor.",
     "periodo": "segunda_infancia",
     "opcoes": [
       {
         "texto": "Exibir o desenho com orgulho",
-        "retornoNarrativo": "A demonstração de criatividade aumenta sua autoestima.",
+        "retornoNarrativo": "Eu exibi meu desenho com orgulho, aumentando minha inteligência.",
         "efeitos": { "inteligencia": 4 },
         "idProximoEvento": null
       },
       {
-        "texto": "Guardar o desenho para si",
-        "retornoNarrativo": "A reserva emocional protege sua sensibilidade, mas reduz a expressão social.",
+        "texto": "Guardar o desenho para mim",
+        "retornoNarrativo": "Eu guardei meu desenho para mim, o que aumentou levemente meu carisma.",
         "efeitos": { "carisma": 1 },
         "idProximoEvento": null
       }

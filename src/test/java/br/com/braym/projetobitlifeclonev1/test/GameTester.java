@@ -1,23 +1,26 @@
 package br.com.braym.projetobitlifeclonev1.test;
 
+import br.com.braym.projetobitlifeclonev1.application.EventManager;
 import br.com.braym.projetobitlifeclonev1.impl.ConsoleObservador;
-import br.com.braym.projetobitlifeclonev1.domain.Evento;
 import br.com.braym.projetobitlifeclonev1.domain.Personagem;
-import br.com.braym.projetobitlifeclonev1.narrativa.Escolha;
-import br.com.braym.projetobitlifeclonev1.narrativa.EventoNarrativa;
-import br.com.braym.projetobitlifeclonev1.narrativa.GerenciadorEventosNarrativa;
-import br.com.braym.projetobitlifeclonev1.utils.EventoJSONReader;
-import br.com.braym.projetobitlifeclonev1.utils.FaseDaVidaResolver;
-import br.com.braym.projetobitlifeclonev1.utils.RandomUtils;
-import java.util.List;
+
 import java.util.Scanner;
 
+/**
+ * Classe de teste para o jogo BitLife Clone com controle adequado de eventos.
+ */
 public class GameTester {
+
+    private static EventManager gerenciadorEventos;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Personagem personagem = new Personagem("Braym");
         personagem.adicionarObservador(new ConsoleObservador());
+        
+        // Inicializa o gerenciador de eventos com o path base para os arquivos de evento
+        gerenciadorEventos = new EventManager("Eventos");
+        
         System.out.println("Personagem criado: " + personagem.getNome());
         System.out.println("Idade inicial: " + personagem.getIdade());
         
@@ -34,7 +37,8 @@ public class GameTester {
                     System.out.println("Idade após envelhecer: " + personagem.getIdade());
                     break;
                 case 3:
-                    processarEventoIntegrado(personagem, scanner);
+                    // Usa o gerenciador de eventos para processar evento sem repetição
+                    gerenciadorEventos.processarEvento(personagem);
                     break;
                 case 4:
                     running = false;
@@ -77,56 +81,5 @@ public class GameTester {
         System.out.println("Inteligência: " + personagem.getInteligencia());
         System.out.println("Carisma: " + personagem.getCarisma());
         System.out.println("Finanças: " + personagem.getFinancas());
-    }
-    
-    /**
-     * Processa um evento integrado:
-     * - Carrega um evento aleatório do arquivo eventos.json da fase atual.
-     * - Exibe suas opções e solicita a escolha do jogador.
-     * - Em seguida, carrega o arquivo eventosNarrativa.json do mesmo diretório,
-     *   busca o evento narrativo correspondente pelo id e executa a narrativa da opção escolhida.
-     */
-    private static void processarEventoIntegrado(Personagem personagem, Scanner scanner) {
-        // Determina a fase do personagem
-        String faseFolder = FaseDaVidaResolver.getFaseDaVidaFolder(personagem.getIdade());
-        String eventosFilePath = "Eventos/" + faseFolder + "/eventos.json";
-        List<Evento> eventos = EventoJSONReader.lerEventos(eventosFilePath);
-        if (eventos == null || eventos.isEmpty()) {
-            System.out.println("Nenhum evento disponível para processar.");
-            return;
-        }
-        // Seleciona aleatoriamente um evento
-        int indiceAleatorio = RandomUtils.gerarNumero(0, eventos.size() - 1);
-        Evento eventoSelecionado = eventos.get(indiceAleatorio);
-        System.out.println("Evento selecionado: " + eventoSelecionado.getDescricao());
-        List<String> opcoes = eventoSelecionado.getOpcoes();
-        for (int i = 0; i < opcoes.size(); i++) {
-            System.out.println((i + 1) + ": " + opcoes.get(i));
-        }
-        System.out.print("Escolha uma opção: ");
-        int escolha = scanner.nextInt() - 1;
-        scanner.nextLine(); // consumir a quebra de linha
-        if (escolha < 0 || escolha >= opcoes.size()) {
-            System.out.println("Opção inválida.");
-            return;
-        }
-        
-        // Agora, carrega o arquivo de eventos narrativos do mesmo diretório
-        String narrativaFilePath = "Eventos/" + faseFolder + "/eventosNarrativa.json";
-        GerenciadorEventosNarrativa gerenciadorNarrativa = new GerenciadorEventosNarrativa(personagem, "Eventos");
-        // Busca o evento narrativo com o mesmo id do evento selecionado
-        EventoNarrativa eventoNarrativo = gerenciadorNarrativa.buscarEventoPorId(eventoSelecionado.getId());
-        if (eventoNarrativo != null) {
-            if (escolha < eventoNarrativo.getOpcoes().size()) {
-                Escolha escolhaNarrativa = eventoNarrativo.getOpcoes().get(escolha);
-                System.out.println("\n" + escolhaNarrativa.getRetornoNarrativo());
-                // Aplica os efeitos da escolha narrativa aos atributos do personagem
-                gerenciadorNarrativa.aplicarEfeitos(personagem, escolhaNarrativa.getEfeitos());
-            } else {
-                System.out.println("Opção narrativa inválida.");
-            }
-        } else {
-            System.out.println("Nenhum evento narrativo vinculado ao id " + eventoSelecionado.getId());
-        }
     }
 }

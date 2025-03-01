@@ -1,18 +1,17 @@
 [
   {
     "id": "001",
-    "descricao": "No hospital, seus pais celebram seu primeiro sorriso com lágrimas de alegria.",
     "periodo": "primeira_infancia",
     "opcoes": [
       {
         "texto": "Abraçar esse momento único",
-        "retornoNarrativo": "Você irradia felicidade contagiante, fortalecendo os laços familiares.",
+        "retornoNarrativo": "Eu abracei esse momento e irradiei uma felicidade contagiante, reforçando os laços com minha família.",
         "efeitos": { "felicidade": 5 },
         "idProximoEvento": null
       },
       {
         "texto": "Ficar pensativo, sem demonstrar emoção",
-        "retornoNarrativo": "A timidez se instala, mas a segurança dos pais permanece.",
+        "retornoNarrativo": "Eu fiquei pensativo e minha timidez se instalou, embora a segurança dos meus pais tenha permanecido.",
         "efeitos": { "felicidade": 1 },
         "idProximoEvento": null
       }
@@ -20,18 +19,17 @@
   },
   {
     "id": "002",
-    "descricao": "Enquanto engatinha, você derruba seu brinquedo favorito, provocando risos em casa.",
     "periodo": "primeira_infancia",
     "opcoes": [
       {
-        "texto": "Rir alto e pedir que te ajudem a pegar o brinquedo",
-        "retornoNarrativo": "O ambiente se enche de alegria, aumentando sua confiança.",
+        "texto": "Rir alto e pedir que me ajudem a pegar o brinquedo",
+        "retornoNarrativo": "Eu ri alto e o ambiente se encheu de alegria, aumentando minha confiança.",
         "efeitos": { "inteligencia": 3 },
         "idProximoEvento": null
       },
       {
-        "texto": "Chorar e se recusar a se levantar",
-        "retornoNarrativo": "A tristeza momentânea gera um leve abalo, mas logo passa.",
+        "texto": "Chorar e me recusar a me levantar",
+        "retornoNarrativo": "Eu chorei e senti uma tristeza momentânea, que abalou minha disposição, mas logo passei por isso.",
         "efeitos": { "felicidade": -2 },
         "idProximoEvento": null
       }
@@ -39,18 +37,17 @@
   },
   {
     "id": "003",
-    "descricao": "Durante o banho, você se diverte ao ver a água espiralar, despertando curiosidade.",
     "periodo": "primeira_infancia",
     "opcoes": [
       {
         "texto": "Brincar e esguichar água para todos",
-        "retornoNarrativo": "A diversão contagia a família, elevando seu senso de descoberta.",
+        "retornoNarrativo": "Eu brinquei e esguichei água para todos, fazendo a diversão contagiar minha família e elevando meu senso de descoberta.",
         "efeitos": { "felicidade": 4 },
         "idProximoEvento": null
       },
       {
         "texto": "Ficar quieto e observar atentamente",
-        "retornoNarrativo": "A atenção aos detalhes aprimora sua percepção, mas sem grande explosão de emoção.",
+        "retornoNarrativo": "Eu fiquei quieto e observei atentamente, aprimorando minha percepção, embora sem uma explosão de emoção.",
         "efeitos": { "inteligencia": 2 },
         "idProximoEvento": null
       }
@@ -58,18 +55,17 @@
   },
   {
     "id": "004",
-    "descricao": "Ao dar seus primeiros passos, você cai, mas rapidamente se levanta com determinação.",
     "periodo": "primeira_infancia",
     "opcoes": [
       {
         "texto": "Tentar novamente com coragem",
-        "retornoNarrativo": "A persistência fortalece sua saúde e determinação.",
+        "retornoNarrativo": "Eu tentei novamente com coragem, e minha persistência fortaleceu minha saúde e determinação.",
         "efeitos": { "saude": 5 },
         "idProximoEvento": null
       },
       {
         "texto": "Ficar no chão e chorar um pouco",
-        "retornoNarrativo": "A frustração diminui sua disposição momentaneamente.",
+        "retornoNarrativo": "Eu fiquei no chão e chorei um pouco, o que diminuiu momentaneamente minha disposição.",
         "efeitos": { "saude": -3 },
         "idProximoEvento": null
       }
