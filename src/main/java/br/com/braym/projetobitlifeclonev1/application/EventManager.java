@@ -65,9 +65,16 @@ public class EventManager {
 		if (eventoSelecionado instanceof EventoInterface) {
 			((EventoInterface) eventoSelecionado).executarEvento(personagem);
 		} else {
-			new EventoImpl(eventoSelecionado.getDescricao(), eventoSelecionado.getOpcoes(),
-					eventoSelecionado.getEfeitos(), eventoSelecionado.getAtributo(), scanner)
-					.executarEvento(personagem);
+			// Correção aqui - usando o construtor correto com o ID como primeiro parâmetro
+			new EventoImpl(
+					eventoSelecionado.getId(),
+					eventoSelecionado.getDescricao(),
+					eventoSelecionado.getOpcoes(),
+					eventoSelecionado.getEfeitos(),
+					eventoSelecionado.getAtributo(),
+					eventoSelecionado.getEfeitosMultiplos(),
+					scanner
+			).executarEvento(personagem);
 		}
 
 		usados.add(eventoSelecionado.getId());
