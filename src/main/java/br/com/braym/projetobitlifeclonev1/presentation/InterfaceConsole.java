@@ -1,6 +1,8 @@
 package br.com.braym.projetobitlifeclonev1.presentation;
 
 import br.com.braym.projetobitlifeclonev1.domain.Personagem;
+import br.com.braym.projetobitlifeclonev1.domain.Relacionamento;
+import br.com.braym.projetobitlifeclonev1.domain.TipoRelacionamento;
 import br.com.braym.projetobitlifeclonev1.service.ProvedorEntrada;
 
 /**
@@ -26,16 +28,17 @@ public class InterfaceConsole {
 	 * Exibe o menu principal
 	 */
 	public void mostrarMenu() {
-		System.out.println("\n" + SEPARADOR);
-		System.out.println(TITULO_JOGO);
-		System.out.println(SEPARADOR);
-		System.out.println("1. Envelhecer personagem");
-		System.out.println("2. Processar evento aleatório");
-		System.out.println("3. Mostrar status do personagem");
-		System.out.println("4. Salvar jogo");
-		System.out.println("5. Carregar jogo");
-		System.out.println("6. Sair");
-		System.out.println(SEPARADOR);
+	    System.out.println("\n" + SEPARADOR);
+	    System.out.println(TITULO_JOGO);
+	    System.out.println(SEPARADOR);
+	    System.out.println("1. Envelhecer personagem");
+	    System.out.println("2. Processar evento aleatório");
+	    System.out.println("3. Mostrar status do personagem");
+	    System.out.println("4. Salvar jogo");
+	    System.out.println("5. Carregar jogo");
+	    System.out.println("6. Relacionamentos");
+	    System.out.println("7. Sair");
+	    System.out.println(SEPARADOR);
 	}
 
 	/**
@@ -44,7 +47,7 @@ public class InterfaceConsole {
 	 * @return A opção escolhida
 	 */
 	public int lerOpcao() {
-		return provedorEntrada.lerInteiroComIntervalo("Escolha uma opção: ", 1, 6);
+		return provedorEntrada.lerInteiroComIntervalo("Escolha uma opção: ", 1, 7);
 	}
 
 	/**
@@ -56,7 +59,7 @@ public class InterfaceConsole {
 		System.out.println("\n" + SEPARADOR);
 		System.out.println("Status do Personagem");
 		System.out.println(SEPARADOR);
-		System.out.println("Nome: " + personagem.getNome());
+		System.out.println("Nome: " + personagem.getNomeCompleto());
 		System.out.println("Idade: " + personagem.getIdade());
 		System.out.println("Estado de Vida: " + personagem.getEstadoVida().getEstado());
 
@@ -98,16 +101,30 @@ public class InterfaceConsole {
 	 * @param personagem Personagem do jogo
 	 */
 	public void exibirBoasVindas(Personagem personagem) {
-		System.out.println("\n" + SEPARADOR);
-		System.out.println("  Bem-vindo ao " + TITULO_JOGO + "!");
-		System.out.println(SEPARADOR);
-		System.out.println("Você está jogando como: " + personagem.getNome());
-		System.out.println("Idade inicial: " + personagem.getIdade());
-		System.out.println("\nViva sua vida virtual, tome decisões e veja como elas afetam seu futuro!");
-		System.out.println(SEPARADOR);
+	    System.out.println("\n" + SEPARADOR);
+	    System.out.println("  Bem-vindo ao " + TITULO_JOGO + "!");
+	    System.out.println(SEPARADOR);
+	    System.out.println("Você está jogando como: " + personagem.getNomeCompleto());
+	    System.out.println("Idade inicial: " + personagem.getIdade());
+	    
+	    // Exibir informações sobre os pais
+	    Relacionamento relPai = personagem.getGerenciadorRelacionamentos().getRelacionamentoPorTipo(TipoRelacionamento.PAI);
+	    Relacionamento relMae = personagem.getGerenciadorRelacionamentos().getRelacionamentoPorTipo(TipoRelacionamento.MAE);
+	    
+	    System.out.println("\nSua família:");
+	    if (relPai != null) {
+	        System.out.println("Pai: " + relPai.getPessoa().getNomeCompleto() + ", " + relPai.getPessoa().getIdade() + " anos");
+	    }
+	    
+	    if (relMae != null) {
+	        System.out.println("Mãe: " + relMae.getPessoa().getNomeCompleto() + ", " + relMae.getPessoa().getIdade() + " anos");
+	    }
+	    
+	    System.out.println("\nViva sua vida virtual, tome decisões e veja como elas afetam seu futuro!");
+	    System.out.println(SEPARADOR);
 
-		System.out.println("\nPressione ENTER para começar...");
-		provedorEntrada.lerLinha("");
+	    System.out.println("\nPressione ENTER para começar...");
+	    provedorEntrada.lerLinha("");
 	}
 
 	/**

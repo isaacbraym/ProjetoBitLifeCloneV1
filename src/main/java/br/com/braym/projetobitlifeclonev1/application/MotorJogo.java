@@ -1,6 +1,7 @@
 package br.com.braym.projetobitlifeclonev1.application;
 
 import br.com.braym.projetobitlifeclonev1.domain.Personagem;
+import br.com.braym.projetobitlifeclonev1.domain.Relacionamento;
 import br.com.braym.projetobitlifeclonev1.infrastructure.persistence.GerenciadorSalvamentoJogo;
 import br.com.braym.projetobitlifeclonev1.infrastructure.persistence.GerenciadorSalvamentoJogo.DadosJogoSalvo;
 import br.com.braym.projetobitlifeclonev1.presentation.InterfaceConsole;
@@ -76,7 +77,8 @@ public class MotorJogo {
 		case 3 -> mostrarStatus();
 		case 4 -> salvarJogo();
 		case 5 -> carregarJogo();
-		case 6 -> encerrarJogo();
+		case 6 -> mostrarRelacionamentos();
+		case 7 -> encerrarJogo();
 		default -> processarOpcaoInvalida();
 		};
 	}
@@ -163,6 +165,54 @@ public class MotorJogo {
 		}
 
 		return true;
+	}
+
+	private boolean mostrarRelacionamentos() {
+	    List<Relacionamento> relacionamentos = personagem.getGerenciadorRelacionamentos().getTodosRelacionamentos();
+
+	    if (relacionamentos.isEmpty()) {
+	        System.out.println("Você não tem relacionamentos ativos no momento.");
+	    } else {
+	        System.out.println("\n" + "=".repeat(50));
+	        System.out.println("Relacionamentos de " + personagem.getNomeCompleto());
+	        System.out.println("=".repeat(50));
+
+	        for (int i = 0; i < relacionamentos.size(); i++) {
+	            Relacionamento rel = relacionamentos.get(i);
+	            System.out.println((i + 1) + ". " + rel.getPessoa().getNomeCompleto() + " - " + 
+	                              rel.getTipo().getDescricao() + " (Nível: " + rel.getNivel() + ")");
+	        }
+
+	        // Pergunta se quer interagir com alguém
+	        System.out.println("\nDeseja interagir com alguém? (S/N)");
+	        String resposta = provedorEntrada.lerLinha("").toLowerCase();
+
+	        if (resposta.startsWith("s")) {
+	            int indice = provedorEntrada.lerInteiroComIntervalo("Escolha o número do relacionamento: ", 1,
+	                    relacionamentos.size());
+
+	            Relacionamento escolhido = relacionamentos.get(indice - 1);
+
+	            System.out.println("\nEscolha o tipo de interação:");
+	            System.out.println("1. Conversar");
+	            System.out.println("2. Dar presente");
+	            System.out.println("3. Insultar");
+
+	            int tipoInteracao = provedorEntrada.lerInteiroComIntervalo("Escolha: ", 1, 3);
+	            String tipo = switch (tipoInteracao) {
+	            case 1 -> "conversar";
+	            case 2 -> "presente";
+	            case 3 -> "insultar";
+	            default -> "conversar";
+	            };
+
+	            String resultado = personagem.getGerenciadorRelacionamentos().interagir(escolhido.getPessoa().getId(),
+	                    tipo);
+	            System.out.println(resultado);
+	        }
+	    }
+
+	    return true;
 	}
 
 	/**

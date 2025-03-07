@@ -2,6 +2,10 @@ package br.com.braym.projetobitlifeclonev1.domain;
 
 import br.com.braym.projetobitlifeclonev1.interfaces.EstadoVida;
 import br.com.braym.projetobitlifeclonev1.interfaces.Observador;
+import br.com.braym.projetobitlifeclonev1.service.CarregadorNomes;
+import br.com.braym.projetobitlifeclonev1.service.GerenciadorRelacionamentos;
+import br.com.braym.projetobitlifeclonev1.utils.FaseDaVida;
+import br.com.braym.projetobitlifeclonev1.utils.UtilitarioAleatorio;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +22,10 @@ public class Personagem {
     private static final int LIMITE_MAXIMO_ATRIBUTO = 100;
     private static final int VALOR_PADRAO_ATRIBUTO = 50;
     private static final int VALOR_MAXIMO_SAUDE = 100;
+    private GerenciadorRelacionamentos gerenciadorRelacionamentos = new GerenciadorRelacionamentos();
 
     private String nome;
+    private String sobrenome;
     private int idade;
 
     // Atributos com valores limitados de 0 a 100
@@ -38,17 +44,30 @@ public class Personagem {
     private EstadoVida estadoVida;
 
     /**
-     * Construtor do personagem com nome
+     * Construtor do personagem com nome completo
+     * 
+     * @param nome Nome do personagem
+     * @param sobrenome Sobrenome do personagem
+     */
+    public Personagem(String nome, String sobrenome) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.idade = 0;
+        inicializarAtributos();
+        this.estadoVida = new EstadoVidaImpl(FaseDaVida.INFANCIA);
+        
+        // Cria família inicial
+        gerenciadorRelacionamentos.criarFamiliaInicial(sobrenome, idade);
+    }
+    /**
+     * Construtor do personagem com apenas nome
+     * Gera um sobrenome aleatório
+     * 
      * @param nome Nome do personagem
      */
     public Personagem(String nome) {
-        this.nome = nome;
-        this.idade = 0;
-        inicializarAtributos();
-        // Estado inicial definido como Infância
-        this.estadoVida = new br.com.braym.projetobitlifeclonev1.impl.Infancia();
+        this(nome, new CarregadorNomes().obterSobrenomeAleatorio());
     }
-    
     /**
      * Inicializa os atributos do personagem com valores padrão
      */
@@ -66,10 +85,23 @@ public class Personagem {
     public String getNome() {
         return nome;
     }
+    
+    public String getSobrenome() {
+        return sobrenome;
+    }
+    
+    public String getNomeCompleto() {
+        return nome + " " + sobrenome;
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
         notificarObservadores("Nome alterado para: " + nome);
+    }
+    
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+        notificarObservadores("Sobrenome alterado para: " + sobrenome);
     }
 
     public int getIdade() {
@@ -147,6 +179,7 @@ public class Personagem {
     // Métodos para alteração de atributos
     /**
      * Altera o valor de finanças adicionando ou subtraindo um delta
+     * 
      * @param delta Valor a ser adicionado (ou subtraído se negativo)
      */
     public void alterarFinancas(int delta) {
@@ -155,6 +188,7 @@ public class Personagem {
 
     /**
      * Altera o valor de inteligência adicionando ou subtraindo um delta
+     * 
      * @param delta Valor a ser adicionado (ou subtraído se negativo)
      */
     public void alterarInteligencia(int delta) {
@@ -163,6 +197,7 @@ public class Personagem {
 
     /**
      * Altera o valor de felicidade adicionando ou subtraindo um delta
+     * 
      * @param delta Valor a ser adicionado (ou subtraído se negativo)
      */
     public void alterarFelicidade(int delta) {
@@ -171,53 +206,59 @@ public class Personagem {
 
     /**
      * Altera o valor de sanidade adicionando ou subtraindo um delta
+     * 
      * @param delta Valor a ser adicionado (ou subtraído se negativo)
      */
     public void alterarSanidade(int delta) {
         setSanidade(getSanidade() + delta);
     }
-    
+
     /**
      * Altera o valor de saúde adicionando ou subtraindo um delta
+     * 
      * @param delta Valor a ser adicionado (ou subtraído se negativo)
      */
     public void alterarSaude(int delta) {
         setSaude(getSaude() + delta);
     }
-    
+
     /**
      * Altera o valor de carisma adicionando ou subtraindo um delta
+     * 
      * @param delta Valor a ser adicionado (ou subtraído se negativo)
      */
     public void alterarCarisma(int delta) {
         setCarisma(getCarisma() + delta);
     }
-    
+
     /**
      * Altera o valor de aparência adicionando ou subtraindo um delta
+     * 
      * @param delta Valor a ser adicionado (ou subtraído se negativo)
      */
     public void alterarAparencia(int delta) {
         setAparencia(getAparencia() + delta);
     }
-    
+
     /**
      * Altera múltiplos atributos do personagem
+     * 
      * @param efeitos Mapa contendo o nome do atributo e o valor a ser alterado
      */
     public void alterarAtributos(Map<String, Integer> efeitos) {
-        if (efeitos == null) return;
-        
+        if (efeitos == null)
+            return;
+
         efeitos.forEach((atributo, valor) -> {
             switch (atributo.toLowerCase()) {
-                case "financas" -> alterarFinancas(valor);
-                case "felicidade" -> alterarFelicidade(valor);
-                case "sanidade" -> alterarSanidade(valor);
-                case "saude" -> alterarSaude(valor);
-                case "inteligencia" -> alterarInteligencia(valor);
-                case "carisma" -> alterarCarisma(valor);
-                case "aparencia" -> alterarAparencia(valor);
-                default -> LOGGER.warning("Atributo desconhecido: " + atributo);
+            case "financas" -> alterarFinancas(valor);
+            case "felicidade" -> alterarFelicidade(valor);
+            case "sanidade" -> alterarSanidade(valor);
+            case "saude" -> alterarSaude(valor);
+            case "inteligencia" -> alterarInteligencia(valor);
+            case "carisma" -> alterarCarisma(valor);
+            case "aparencia" -> alterarAparencia(valor);
+            default -> LOGGER.warning("Atributo desconhecido: " + atributo);
             }
         });
     }
@@ -225,6 +266,7 @@ public class Personagem {
     // Gerenciamento de observadores
     /**
      * Adiciona um observador para receber notificações de alterações
+     * 
      * @param observador Observador a ser adicionado
      */
     public void adicionarObservador(Observador observador) {
@@ -235,6 +277,7 @@ public class Personagem {
 
     /**
      * Remove um observador da lista de notificações
+     * 
      * @param observador Observador a ser removido
      */
     public void removerObservador(Observador observador) {
@@ -243,6 +286,7 @@ public class Personagem {
 
     /**
      * Notifica todos os observadores com uma mensagem
+     * 
      * @param mensagem Mensagem a ser enviada aos observadores
      */
     private void notificarObservadores(String mensagem) {
@@ -251,8 +295,17 @@ public class Personagem {
         }
     }
 
+    public GerenciadorRelacionamentos getGerenciadorRelacionamentos() {
+        return gerenciadorRelacionamentos;
+    }
+
+    public static int obterAleatorio(int min, int max) {
+        return UtilitarioAleatorio.gerarNumero(min, max);
+    }
+
     /**
      * Simula o envelhecimento do personagem, incrementando a idade e atualizando atributos
+     * 
      * @return A idade anterior do personagem
      */
     public int envelhecer() {
@@ -261,6 +314,17 @@ public class Personagem {
         alterarSaude(-1); // Cada ano diminui 1 ponto de saúde
         notificarObservadores("Envelhecimento: idade = " + getIdade());
         atualizarEstadoVida();
+        
+        // Ao envelhecer, os relacionamentos também evoluem
+        gerenciadorRelacionamentos.avancarTempo();
+        
+        // Chance de fazer uma nova amizade a cada ano
+        if (UtilitarioAleatorio.eventoAcontece(30)) {
+            Relacionamento novaAmizade = gerenciadorRelacionamentos.criarAmizadeAleatoria(idade);
+            notificarObservadores("Você conheceu " + novaAmizade.getPessoa().getNomeCompleto() + 
+                                 " e vocês se tornaram amigos!");
+        }
+        
         return idadeAnterior;
     }
 
@@ -278,6 +342,7 @@ public class Personagem {
 
     /**
      * Retorna o estado de vida atual do personagem
+     * 
      * @return O estado de vida atual
      */
     public EstadoVida getEstadoVida() {
@@ -286,6 +351,7 @@ public class Personagem {
 
     /**
      * Define o estado de vida do personagem
+     * 
      * @param estadoVida Novo estado de vida
      */
     public void setEstadoVida(EstadoVida estadoVida) {
@@ -298,6 +364,7 @@ public class Personagem {
 
     /**
      * Limita um valor para ficar dentro do intervalo de atributos permitido
+     * 
      * @param valor Valor a ser limitado
      * @return Valor limitado entre o mínimo e máximo
      */

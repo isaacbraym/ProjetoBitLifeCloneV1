@@ -1,7 +1,8 @@
 package br.com.braym.projetobitlifeclonev1.service;
 
 import br.com.braym.projetobitlifeclonev1.domain.Evento;
-import br.com.braym.projetobitlifeclonev1.utils.EventoJSONReader;
+import br.com.braym.projetobitlifeclonev1.utils.LeitorJSON;
+
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -17,6 +18,7 @@ public class CarregadorEventos {
     
     private final String pastaBases;
     private final Map<String, List<Evento>> eventosPorFase;
+    private final LeitorJSON leitorJSON;
     
     /**
      * Construtor que inicializa o carregador com a pasta base de eventos
@@ -25,6 +27,7 @@ public class CarregadorEventos {
     public CarregadorEventos(String pastaBases) {
         this.pastaBases = pastaBases;
         this.eventosPorFase = new ConcurrentHashMap<>();
+        this.leitorJSON = new LeitorJSON();
     }
     
     /**
@@ -35,7 +38,7 @@ public class CarregadorEventos {
     public List<Evento> carregarEventosParaFase(String pastaDaFase) {
         if (!eventosPorFase.containsKey(pastaDaFase)) {
             String caminhoArquivo = pastaBases + "/" + pastaDaFase + "/eventos.json";
-            List<Evento> listaEventos = EventoJSONReader.lerEventos(caminhoArquivo);
+            List<Evento> listaEventos = leitorJSON.lerEventos(caminhoArquivo);
             eventosPorFase.put(pastaDaFase, listaEventos != null ? listaEventos : new ArrayList<>());
             LOGGER.info("Carregados " + (listaEventos != null ? listaEventos.size() : 0) + " evento(s) para a fase " + pastaDaFase);
         }

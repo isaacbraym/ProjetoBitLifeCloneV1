@@ -34,8 +34,7 @@ public class FabricaJogo {
         ProvedorEntrada provedorEntrada = criarProvedorEntrada();
         GerenciadorSalvamentoJogo gerenciadorSalvamento = criarGerenciadorSalvamento();
         CarregadorEventos carregadorEventos = criarCarregadorEventos();
-        GerenciadorEventos gerenciadorEventos = criarGerenciadorEventos(carregadorEventos, provedorEntrada);
-        InterfaceConsole interfaceConsole = criarInterfaceConsole(provedorEntrada);
+        GerenciadorEventos gerenciadorEventos = criarGerenciadorEventos(provedorEntrada);        InterfaceConsole interfaceConsole = criarInterfaceConsole(provedorEntrada);
         
         // Cria o personagem
         Personagem personagem = criarPersonagem(nomePersonagem);
@@ -63,8 +62,7 @@ public class FabricaJogo {
         // Cria as dependências necessárias
         ProvedorEntrada provedorEntrada = criarProvedorEntrada();
         GerenciadorSalvamentoJogo gerenciadorSalvamento = criarGerenciadorSalvamento();
-        CarregadorEventos carregadorEventos = criarCarregadorEventos();
-        GerenciadorEventos gerenciadorEventos = criarGerenciadorEventos(carregadorEventos, provedorEntrada);
+        GerenciadorEventos gerenciadorEventos = criarGerenciadorEventos(provedorEntrada);
         InterfaceConsole interfaceConsole = criarInterfaceConsole(provedorEntrada);
         
         // Garante que o personagem tem um observador
@@ -72,12 +70,12 @@ public class FabricaJogo {
         
         // Cria e retorna o motor do jogo
         return new MotorJogo(
-            personagem,
-            gerenciadorEventos,
-            interfaceConsole,
-            provedorEntrada,
-            gerenciadorSalvamento
-        );
+                personagem,
+                gerenciadorEventos,
+                interfaceConsole,
+                provedorEntrada,
+                gerenciadorSalvamento
+            );
     }
     
     /**
@@ -110,10 +108,8 @@ public class FabricaJogo {
      * @param provedorEntrada Provedor de entrada
      * @return Gerenciador de eventos configurado
      */
-    public GerenciadorEventos criarGerenciadorEventos(
-            CarregadorEventos carregadorEventos, 
-            ProvedorEntrada provedorEntrada) {
-        return new GerenciadorEventos(carregadorEventos, provedorEntrada);
+    public GerenciadorEventos criarGerenciadorEventos(ProvedorEntrada provedorEntrada) {
+        return new GerenciadorEventos(pastaBases, provedorEntrada);
     }
     
     /**

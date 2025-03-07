@@ -1,33 +1,50 @@
 package br.com.braym.projetobitlifeclonev1.utils;
 
+import java.util.NavigableMap;
+import java.util.TreeMap;
+
 /**
- * Utilitário para determinação da fase da vida com base na idade.
- * Utiliza recursos do Java 17 como switch expressions.
+ * Utilitário para determinar a fase da vida e pasta correspondente com base na idade.
+ * Implementado usando TreeMap para melhor escalabilidade e facilidade de manutenção.
  */
 public class FaseDaVidaResolver {
-
+    
+    // Mapeamento de idade para fase da vida
+    private static final NavigableMap<Integer, FaseDaVida> FASES_POR_IDADE = new TreeMap<>();
+    
+    // Mapeamento de idade para pasta
+    private static final NavigableMap<Integer, String> PASTAS_POR_IDADE = new TreeMap<>();
+    
+    // Inicialização dos mapeamentos
+    static {
+        // Configuração das fases da vida
+        FASES_POR_IDADE.put(0, FaseDaVida.INFANCIA);     // 0-11 anos
+        FASES_POR_IDADE.put(12, FaseDaVida.ADOLESCENCIA); // 12-17 anos
+        FASES_POR_IDADE.put(18, FaseDaVida.ADULTO);      // 18-64 anos
+        FASES_POR_IDADE.put(65, FaseDaVida.VELHICE);     // 65+ anos
+        
+        // Configuração das pastas por idade
+        PASTAS_POR_IDADE.put(0, "01-PrimeiraInfancia_0-3");
+        PASTAS_POR_IDADE.put(3, "02-SegundaInfancia_3-6");
+        PASTAS_POR_IDADE.put(6, "03-TerceiraInfancia_6-10");
+        PASTAS_POR_IDADE.put(11, "04-AdolescenciaInicial_11-14");
+        PASTAS_POR_IDADE.put(15, "05-AdolescenciaMedia_15-17");
+        PASTAS_POR_IDADE.put(18, "06-AdolescenciaTardia_18-21");
+        PASTAS_POR_IDADE.put(22, "07-Juventude_22-29");
+        PASTAS_POR_IDADE.put(30, "08-AdultoJovem_30-39");
+        PASTAS_POR_IDADE.put(40, "09-MeiaIdade_40-59");
+        PASTAS_POR_IDADE.put(60, "10-IdosoJovem_60-74");
+        PASTAS_POR_IDADE.put(75, "11-IdosoMaduro_75-89");
+        PASTAS_POR_IDADE.put(90, "12-VelhiceAvancada_90");
+    }
+    
     /**
-     * Obtém o nome da pasta que contém os eventos para a idade específica
+     * Obtém a pasta da fase da vida para a idade específica
      * @param idade Idade do personagem
-     * @return Nome da pasta correspondente à fase da vida
+     * @return Nome da pasta correspondente
      */
     public static String getPastaDaFaseDaVida(int idade) {
-        return switch (idade) {
-            case 0, 1, 2 -> "01-PrimeiraInfancia_0-3";
-            case 3, 4, 5 -> "02-SegundaInfancia_3-6";
-            case 6, 7, 8, 9, 10 -> "03-TerceiraInfancia_6-10";
-            case 11, 12, 13, 14 -> "04-AdolescenciaInicial_11-14";
-            case 15, 16, 17 -> "05-AdolescenciaMedia_15-17";
-            case 18, 19, 20, 21 -> "06-AdolescenciaTardia_18-21";
-            case 22, 23, 24, 25, 26, 27, 28, 29 -> "07-Juventude_22-29";
-            case 30, 31, 32, 33, 34, 35, 36, 37, 38, 39 -> "08-AdultoJovem_30-39";
-            default -> {
-                if (idade < 60) yield "09-MeiaIdade_40-59";
-                else if (idade < 75) yield "10-IdosoJovem_60-74";
-                else if (idade < 90) yield "11-IdosoMaduro_75-89";
-                else yield "12-VelhiceAvancada_90";
-            }
-        };
+        return PASTAS_POR_IDADE.floorEntry(idade).getValue();
     }
     
     /**
@@ -40,28 +57,51 @@ public class FaseDaVidaResolver {
     }
     
     /**
-     * Obtém o enum de fase da vida correspondente à idade
+     * Obtém o enum da fase da vida correspondente à idade
      * @param idade Idade do personagem
      * @return Enum FaseDaVida correspondente
      */
     public static FaseDaVida obterFaseDaVida(int idade) {
-        return switch (idade) {
-            case 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 -> FaseDaVida.INFANCIA;
-            case 12, 13, 14, 15, 16, 17 -> FaseDaVida.ADOLESCENCIA;
-            case 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 
-                 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 
-                 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64 -> FaseDaVida.ADULTO;
-            default -> FaseDaVida.VELHICE;
-        };
+        return FASES_POR_IDADE.floorEntry(idade).getValue();
     }
     
     /**
-     * Verifica se o personagem mudou de fase com a última alteração de idade
-     * @param idadeAtual Idade atual do personagem
-     * @param idadeAnterior Idade anterior do personagem
-     * @return true se houve mudança de fase, false caso contrário
+     * Verifica se houve mudança de fase entre duas idades
+     * @param idadeAtual Idade atual
+     * @param idadeAnterior Idade anterior
+     * @return true se houve mudança de fase
      */
-    public static boolean houvelMudancaDeFase(int idadeAtual, int idadeAnterior) {
+    public static boolean houveMudancaDeFase(int idadeAtual, int idadeAnterior) {
         return obterFaseDaVida(idadeAtual) != obterFaseDaVida(idadeAnterior);
+    }
+    
+    /**
+     * Verifica se houve mudança de pasta entre duas idades
+     * @param idadeAtual Idade atual
+     * @param idadeAnterior Idade anterior
+     * @return true se houve mudança de pasta
+     */
+    public static boolean houveMudancaDePasta(int idadeAtual, int idadeAnterior) {
+        return !getPastaDaFaseDaVida(idadeAtual).equals(getPastaDaFaseDaVida(idadeAnterior));
+    }
+    
+    /**
+     * Adiciona uma nova configuração de pasta para uma idade específica.
+     * Útil para extensões ou testes.
+     * @param idadeMinima Idade mínima para a pasta
+     * @param nomePasta Nome da pasta
+     */
+    public static void adicionarConfiguracaoPasta(int idadeMinima, String nomePasta) {
+        PASTAS_POR_IDADE.put(idadeMinima, nomePasta);
+    }
+    
+    /**
+     * Adiciona uma nova configuração de fase para uma idade específica.
+     * Útil para extensões ou testes.
+     * @param idadeMinima Idade mínima para a fase
+     * @param fase Enum da fase
+     */
+    public static void adicionarConfiguracaoFase(int idadeMinima, FaseDaVida fase) {
+        FASES_POR_IDADE.put(idadeMinima, fase);
     }
 }
