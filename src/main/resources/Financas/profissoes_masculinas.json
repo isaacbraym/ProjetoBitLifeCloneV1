@@ -1,0 +1,53 @@
+{
+  "profissoes": [
+    {
+      "nome": "Médico",
+      "salarioMinimo": 8300,
+      "salarioMaximo": 12500,
+      "financasMinimo": 12000,
+      "financasMaximo": 75000
+    },
+    {
+      "nome": "Engenheiro",
+      "salarioMinimo": 5000,
+      "salarioMaximo": 10000,
+      "financasMinimo": 8000,
+      "financasMaximo": 50000
+    },
+    {
+      "nome": "Professor",
+      "salarioMinimo": 3000,
+      "salarioMaximo": 5500,
+      "financasMinimo": 2000,
+      "financasMaximo": 15000
+    },
+    {
+      "nome": "Policial",
+      "salarioMinimo": 2000,
+      "salarioMaximo": 4000,
+      "financasMinimo": 1000,
+      "financasMaximo": 10000
+    },
+    {
+      "nome": "Advogado",
+      "salarioMinimo": 6000,
+      "salarioMaximo": 15000,
+      "financasMinimo": 10000,
+      "financasMaximo": 60000
+    },
+    {
+      "nome": "Empresário",
+      "salarioMinimo": 8000,
+      "salarioMaximo": 30000,
+      "financasMinimo": 20000,
+      "financasMaximo": 100000
+    },
+    {
+      "nome": "Desempregado",
+      "salarioMinimo": 0,
+      "salarioMaximo": 1000,
+      "financasMinimo": 0,
+      "financasMaximo": 3000
+    }
+  ]
+}

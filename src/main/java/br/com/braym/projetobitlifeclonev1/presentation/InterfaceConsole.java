@@ -1,6 +1,7 @@
 package br.com.braym.projetobitlifeclonev1.presentation;
 
 import br.com.braym.projetobitlifeclonev1.domain.Personagem;
+import br.com.braym.projetobitlifeclonev1.domain.Pessoa;
 import br.com.braym.projetobitlifeclonev1.domain.Relacionamento;
 import br.com.braym.projetobitlifeclonev1.domain.TipoRelacionamento;
 import br.com.braym.projetobitlifeclonev1.service.ProvedorEntrada;
@@ -106,6 +107,7 @@ public class InterfaceConsole {
 	    System.out.println(SEPARADOR);
 	    System.out.println("Você está jogando como: " + personagem.getNomeCompleto());
 	    System.out.println("Idade inicial: " + personagem.getIdade());
+	    System.out.println("Finanças iniciais: R$" + personagem.getFinancas() + ",00");
 	    
 	    // Exibir informações sobre os pais
 	    Relacionamento relPai = personagem.getGerenciadorRelacionamentos().getRelacionamentoPorTipo(TipoRelacionamento.PAI);
@@ -113,11 +115,17 @@ public class InterfaceConsole {
 	    
 	    System.out.println("\nSua família:");
 	    if (relPai != null) {
-	        System.out.println("Pai: " + relPai.getPessoa().getNomeCompleto() + ", " + relPai.getPessoa().getIdade() + " anos");
+	        Pessoa pai = relPai.getPessoa();
+	        String profissaoPai = pai.getProfissao() != null ? pai.getProfissao().getNome() : "Desempregado";
+	        System.out.println("Pai: " + pai.getNomeCompleto() + ", " + pai.getIdade() + " anos");
+	        System.out.println("     Profissão: " + profissaoPai + " (Salário: R$" + pai.getSalario() + ",00)");
 	    }
 	    
 	    if (relMae != null) {
-	        System.out.println("Mãe: " + relMae.getPessoa().getNomeCompleto() + ", " + relMae.getPessoa().getIdade() + " anos");
+	        Pessoa mae = relMae.getPessoa();
+	        String profissaoMae = mae.getProfissao() != null ? mae.getProfissao().getNome() : "Desempregada";
+	        System.out.println("Mãe: " + mae.getNomeCompleto() + ", " + mae.getIdade() + " anos");
+	        System.out.println("     Profissão: " + profissaoMae + " (Salário: R$" + mae.getSalario() + ",00)");
 	    }
 	    
 	    System.out.println("\nViva sua vida virtual, tome decisões e veja como elas afetam seu futuro!");

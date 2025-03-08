@@ -1,0 +1,40 @@
+{
+  "padroes": [
+    {
+      "texto": "Você teve uma conversa casual com {nome}.",
+      "modificadorNivel": [1, 5],
+      "modificadorFelicidade": [1, 3]
+    },
+    {
+      "texto": "Você conversou sobre o dia com {nome}.",
+      "modificadorNivel": [2, 6],
+      "modificadorFelicidade": [1, 4]
+    }
+  ],
+  "familiar": [
+    {
+      "texto": "Você contou sobre seu dia para {nome}.",
+      "modificadorNivel": [3, 8],
+      "modificadorFelicidade": [2, 5]
+    },
+    {
+      "texto": "Você e {nome} conversaram sobre assuntos familiares.",
+      "modificadorNivel": [2, 7],
+      "modificadorFelicidade": [1, 4]
+    }
+  ],
+  "amizade": [
+    {
+      "texto": "Você e {nome} riram bastante conversando sobre coisas engraçadas.",
+      "modificadorNivel": [4, 10],
+      "modificadorFelicidade": [3, 7]
+    }
+  ],
+  "romantico": [
+    {
+      "texto": "Você teve uma conversa profunda e significativa com {nome}.",
+      "modificadorNivel": [5, 12],
+      "modificadorFelicidade": [4, 8]
+    }
+  ]
+}

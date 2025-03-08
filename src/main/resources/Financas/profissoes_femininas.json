@@ -1,0 +1,53 @@
+{
+  "profissoes": [
+    {
+      "nome": "Médica",
+      "salarioMinimo": 8300,
+      "salarioMaximo": 12500,
+      "financasMinimo": 12000,
+      "financasMaximo": 75000
+    },
+    {
+      "nome": "Engenheira",
+      "salarioMinimo": 5000,
+      "salarioMaximo": 10000,
+      "financasMinimo": 8000,
+      "financasMaximo": 50000
+    },
+    {
+      "nome": "Professora",
+      "salarioMinimo": 3000,
+      "salarioMaximo": 5500,
+      "financasMinimo": 2000,
+      "financasMaximo": 15000
+    },
+    {
+      "nome": "Secretária",
+      "salarioMinimo": 1300,
+      "salarioMaximo": 2500,
+      "financasMinimo": 500,
+      "financasMaximo": 4500
+    },
+    {
+      "nome": "Advogada",
+      "salarioMinimo": 6000,
+      "salarioMaximo": 15000,
+      "financasMinimo": 10000,
+      "financasMaximo": 60000
+    },
+    {
+      "nome": "Enfermeira",
+      "salarioMinimo": 2500,
+      "salarioMaximo": 4500,
+      "financasMinimo": 1500,
+      "financasMaximo": 12000
+    },
+    {
+      "nome": "Desempregada",
+      "salarioMinimo": 0,
+      "salarioMaximo": 1000,
+      "financasMinimo": 0,
+      "financasMaximo": 3000
+    }
+  ]
+}

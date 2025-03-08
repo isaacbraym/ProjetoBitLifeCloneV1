@@ -129,6 +129,12 @@ public class FabricaJogo {
     public Personagem criarPersonagem(String nome) {
         Personagem personagem = new Personagem(nome);
         personagem.adicionarObservador(new ConsoleObservador());
+        
+        // Criar família inicial com referência ao personagem para definir finanças
+        String sobrenome = personagem.getSobrenome();
+        int idade = personagem.getIdade();
+        personagem.getGerenciadorRelacionamentos().criarFamiliaInicial(sobrenome, idade, personagem);
+        
         return personagem;
     }
 }

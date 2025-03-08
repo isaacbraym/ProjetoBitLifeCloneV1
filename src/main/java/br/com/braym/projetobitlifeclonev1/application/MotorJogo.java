@@ -177,6 +177,11 @@ public class MotorJogo {
 
 		return true;
 	}
+	/**
+	 * Exibe e gerencia os relacionamentos do personagem
+	 * 
+	 * @return true para continuar o jogo
+	 */
 	private boolean mostrarRelacionamentos() {
 	    List<Relacionamento> relacionamentos = personagem.getGerenciadorRelacionamentos().getTodosRelacionamentos();
 
@@ -191,6 +196,11 @@ public class MotorJogo {
 	    return true;
 	}
 
+	/**
+	 * Exibe a lista de relacionamentos do personagem
+	 * 
+	 * @param relacionamentos Lista de relacionamentos a exibir
+	 */
 	private void exibirRelacionamentos(List<Relacionamento> relacionamentos) {
 	    System.out.println("\n" + "=".repeat(50));
 	    System.out.println("Relacionamentos de " + personagem.getNomeCompleto());
@@ -203,33 +213,58 @@ public class MotorJogo {
 	    }
 	}
 
+	/**
+	 * Pergunta ao usuário se deseja interagir com algum relacionamento
+	 * 
+	 * @return true se o usuário deseja interagir
+	 */
 	private boolean desejaInteragir() {
 	    System.out.println("\nDeseja interagir com alguém? (S/N)");
 	    String resposta = provedorEntrada.lerLinha("").toLowerCase();
 	    return resposta.startsWith("s");
 	}
 
+	/**
+	 * Gerencia a interação do personagem com um relacionamento escolhido
+	 * 
+	 * @param relacionamentos Lista de relacionamentos disponíveis
+	 */
 	private void interagirComRelacionamento(List<Relacionamento> relacionamentos) {
 	    int indice = provedorEntrada.lerInteiroComIntervalo("Escolha o número do relacionamento: ", 1, relacionamentos.size());
 	    Relacionamento escolhido = relacionamentos.get(indice - 1);
 
+	    // Obtém interações disponíveis para a idade atual
+	    List<String> interacoesDisponiveis = personagem.getGerenciadorRelacionamentos()
+	                                              .obterInteracoesDisponiveis(personagem);
+	    
+	    if (interacoesDisponiveis.isEmpty()) {
+	        System.out.println("Não há interações disponíveis para sua idade atual.");
+	        return;
+	    }
+	    
 	    System.out.println("\nEscolha o tipo de interação:");
-	    System.out.println("1. Conversar");
-	    System.out.println("2. Dar presente");
-	    System.out.println("3. Insultar");
+	    for (int i = 0; i < interacoesDisponiveis.size(); i++) {
+	        System.out.println((i + 1) + ". " + formatarNomeInteracao(interacoesDisponiveis.get(i)));
+	    }
 
-	    int tipoInteracao = provedorEntrada.lerInteiroComIntervalo("Escolha: ", 1, 3);
-	    String tipo = switch (tipoInteracao) {
-	        case 1 -> "conversar";
-	        case 2 -> "presente";
-	        case 3 -> "insultar";
-	        default -> "conversar";
-	    };
+	    int tipoInteracao = provedorEntrada.lerInteiroComIntervalo("Escolha: ", 1, interacoesDisponiveis.size());
+	    String tipoEscolhido = interacoesDisponiveis.get(tipoInteracao - 1);
 
-	    String resultado = personagem.getGerenciadorRelacionamentos().interagir(escolhido.getPessoa().getId(), tipo);
+	    String resultado = personagem.getGerenciadorRelacionamentos()
+	                               .interagir(personagem, escolhido.getPessoa().getId(), tipoEscolhido);
 	    System.out.println(resultado);
 	}
 
+	/**
+	 * Formata o nome da interação para exibição
+	 * 
+	 * @param interacao Nome da interação a ser formatado
+	 * @return Nome formatado com primeira letra maiúscula
+	 */
+	private String formatarNomeInteracao(String interacao) {
+	    if (interacao == null || interacao.isEmpty()) return "";
+	    return interacao.substring(0, 1).toUpperCase() + interacao.substring(1).replace('_', ' ');
+	}
 	/**
 	 * Encerra o jogo
 	 * 

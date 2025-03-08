@@ -1,0 +1,30 @@
+[
+  {
+    "fase": "01-PrimeiraInfancia_0-3",
+    "interacoesDisponiveis": []
+  },
+  {
+    "fase": "02-SegundaInfancia_3-6",
+    "interacoesDisponiveis": ["brincar", "sorrir"]
+  },
+  {
+    "fase": "03-TerceiraInfancia_6-10",
+    "interacoesDisponiveis": ["brincar", "conversar", "sorrir"]
+  },
+  {
+    "fase": "04-AdolescenciaInicial_11-14",
+    "interacoesDisponiveis": ["conversar", "presente", "brincar", "passear"]
+  },
+  {
+    "fase": "05-AdolescenciaMedia_15-17",
+    "interacoesDisponiveis": ["conversar", "presente", "insultar", "passear"]
+  },
+  {
+    "fase": "06-AdolescenciaTardia_18-21",
+    "interacoesDisponiveis": ["conversar", "presente", "insultar", "passear", "flerte"]
+  },
+  {
+    "fase": "07-Juventude_22-29",
+    "interacoesDisponiveis": ["conversar", "presente", "insultar", "passear", "flerte"]
+  }
+]

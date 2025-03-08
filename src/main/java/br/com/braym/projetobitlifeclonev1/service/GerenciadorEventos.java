@@ -76,10 +76,10 @@ public class GerenciadorEventos {
      * @return true se o evento foi processado com sucesso, false se não havia eventos disponíveis
      */
     public boolean processarEvento(Personagem personagem) {
-        // Chance de eventos de relacionamento (se tiver relacionamentos)
+        // Aqui modificamos para criar eventos de relacionamento narrativos em vez de interações diretas
         List<Relacionamento> relacionamentos = personagem.getGerenciadorRelacionamentos().getTodosRelacionamentos();
         if (!relacionamentos.isEmpty() && UtilitarioAleatorio.eventoAcontece(30)) {
-            return processarEventoRelacionamento(personagem, relacionamentos);
+            return processarEventoNarrativoRelacionamento(personagem, relacionamentos);
         }
         
         // Se não processou evento de relacionamento, processa evento normal
@@ -123,84 +123,68 @@ public class GerenciadorEventos {
     }
     
     /**
-     * Processa um evento específico de relacionamento
+     * Processa um evento narrativo sobre relacionamento, sem interação direta
      * 
      * @param personagem Personagem afetado pelo evento
      * @param relacionamentos Lista de relacionamentos disponíveis
      * @return true se o evento foi processado com sucesso
      */
-    private boolean processarEventoRelacionamento(Personagem personagem, List<Relacionamento> relacionamentos) {
+    private boolean processarEventoNarrativoRelacionamento(Personagem personagem, List<Relacionamento> relacionamentos) {
         // Seleciona um relacionamento aleatório
         Relacionamento rel = relacionamentos.get(UtilitarioAleatorio.gerarNumero(0, relacionamentos.size() - 1));
         Pessoa pessoa = rel.getPessoa();
 
-        System.out.println("Evento de relacionamento com " + pessoa.getNome());
-        System.out.println("Vocês são " + rel.getTipo().getDescricao() + " há " + rel.getTempo() + " anos.");
-
-        // Opções de interação baseadas no tipo de relacionamento
+        // Cria um evento narrativo sobre o relacionamento em vez de interação direta
         List<String> opcoes = new ArrayList<>();
-        opcoes.add("Passar um tempo juntos");
-        opcoes.add("Dar um presente");
-
-        if (rel.getTipo() == TipoRelacionamento.AMIZADE && rel.getNivel() > 70) {
-            opcoes.add("Propor namoro");
-        }
-
-        if (rel.getTipo() == TipoRelacionamento.NAMORO && rel.getNivel() > 80 && rel.getTempo() > 2) {
-            opcoes.add("Propor casamento");
-        }
-
-        // Mostrar opções
-        for (int i = 0; i < opcoes.size(); i++) {
-            System.out.println((i + 1) + ". " + opcoes.get(i));
-        }
-
-        // Processar escolha
-        int escolha = provedorEntrada.lerInteiroComIntervalo("Escolha: ", 1, opcoes.size()) - 1;
-        String opcaoEscolhida = opcoes.get(escolha);
-
-        // Processar efeito da escolha
-        switch (opcaoEscolhida) {
-            case "Passar um tempo juntos":
-                int ganho = UtilitarioAleatorio.gerarNumero(5, 15);
-                rel.alterarNivel(ganho);
-                System.out.println("Vocês passaram um bom tempo juntos. O nível de relacionamento aumentou para " + rel.getNivel());
-                personagem.alterarFelicidade(5);
+        Map<String, Integer> efeitos = new HashMap<>();
+        String descricao;
+        
+        // Escolhe um tipo de evento narrativo aleatório baseado no tipo de relacionamento
+        int tipoEvento = UtilitarioAleatorio.gerarNumero(1, 3);
+        
+        switch (tipoEvento) {
+            case 1: // Evento positivo
+                descricao = "Você encontrou " + pessoa.getNomeCompleto() + " por acaso e tiveram um momento agradável juntos.";
+                opcoes.add("Aproveitar o momento");
+                opcoes.add("Manter distância");
+                efeitos.put("felicidade", 5);
                 break;
-
-            case "Dar um presente":
-                int ganhoPresente = UtilitarioAleatorio.gerarNumero(10, 25);
-                rel.alterarNivel(ganhoPresente);
-                System.out.println(pessoa.getNome() + " adorou seu presente! O nível de relacionamento aumentou para " + rel.getNivel());
-                personagem.alterarFelicidade(8);
-                personagem.alterarFinancas(-50); // Custo do presente
+                
+            case 2: // Evento neutro
+                descricao = pessoa.getNomeCompleto() + " entrou em contato com você sobre assuntos pessoais.";
+                opcoes.add("Ouvir com atenção");
+                opcoes.add("Ser breve na conversa");
+                efeitos.put("carisma", 3);
                 break;
-
-            case "Propor namoro":
-                if (UtilitarioAleatorio.eventoAcontece(rel.getNivel())) {
-                    rel.setTipo(TipoRelacionamento.NAMORO);
-                    System.out.println(pessoa.getNome() + " aceitou seu pedido de namoro!");
-                    personagem.alterarFelicidade(20);
-                } else {
-                    rel.alterarNivel(-20);
-                    System.out.println(pessoa.getNome() + " recusou seu pedido. O relacionamento esfriou.");
-                    personagem.alterarFelicidade(-15);
-                }
+                
+            case 3: // Evento desafiador
+                descricao = "Você percebeu que " + pessoa.getNomeCompleto() + " está passando por um momento difícil.";
+                opcoes.add("Oferecer ajuda");
+                opcoes.add("Esperar que eles peçam ajuda");
+                efeitos.put("sanidade", -2);
+                efeitos.put("carisma", 4);
                 break;
-
-            case "Propor casamento":
-                if (UtilitarioAleatorio.eventoAcontece(rel.getNivel() - 10)) {
-                    rel.setTipo(TipoRelacionamento.CASAMENTO);
-                    System.out.println(pessoa.getNome() + " aceitou seu pedido de casamento! Vocês agora são casados.");
-                    personagem.alterarFelicidade(30);
-                } else {
-                    rel.alterarNivel(-30);
-                    System.out.println(pessoa.getNome() + " recusou seu pedido de casamento. O relacionamento sofreu bastante.");
-                    personagem.alterarFelicidade(-25);
-                }
-                break;
+                
+            default:
+                descricao = "Você recebeu notícias de " + pessoa.getNomeCompleto() + ".";
+                opcoes.add("Responder positivamente");
+                opcoes.add("Ignorar");
+                efeitos.put("felicidade", 2);
         }
-
+        
+        // Cria e executa um evento temporário
+        Evento eventoTemporario = new Evento();
+        eventoTemporario.setId("rel_temp_" + System.currentTimeMillis());
+        eventoTemporario.setDescricao(descricao);
+        eventoTemporario.setOpcoes(opcoes);
+        eventoTemporario.setEfeitosMultiplos(efeitos);
+        
+        // Executa o evento
+        new EventoImpl(eventoTemporario, provedorEntrada.obterScanner()).executarEvento(personagem);
+        
+        // Impacto no relacionamento
+        rel.alterarNivel(UtilitarioAleatorio.gerarNumero(1, 5));
+        
         return true;
     }
 

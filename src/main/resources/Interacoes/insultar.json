@@ -1,0 +1,19 @@
+{
+  "padroes": [
+    {
+      "texto": "Você insultou {nome}. Eles ficaram magoados.",
+      "modificadorNivel": [-20, -10],
+      "modificadorFelicidade": [-8, -3],
+      "chanceRetaliacao": 30
+    }
+  ],
+  "romantico": [
+    {
+      "texto": "Você brigou feio com {nome}. O relacionamento sofreu um grande abalo.",
+      "modificadorNivel": [-40, -20],
+      "modificadorFelicidade": [-15, -8],
+      "chanceRetaliacao": 50,
+      "chanceTermino": 10
+    }
+  ]
+}

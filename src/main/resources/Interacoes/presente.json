@@ -1,0 +1,26 @@
+{
+  padroes [
+    {
+      texto Você deu um presente para {nome}. Eles ficaram felizes!,
+      modificadorNivel [5, 15],
+      modificadorFelicidade [3, 8],
+      custo [10, 50]
+    }
+  ],
+  familiar [
+    {
+      texto Você deu um belo presente familiar para {nome}. Eles adoraram!,
+      modificadorNivel [8, 20],
+      modificadorFelicidade [4, 10],
+      custo [20, 100]
+    }
+  ],
+  amizade [
+    {
+      texto Você surpreendeu {nome} com um presente especial.,
+      modificadorNivel [10, 25],
+      modificadorFelicidade [5, 12],
+      custo [30, 150]
+    }
+  ]
+}
