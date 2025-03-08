@@ -1,10 +1,11 @@
 package br.com.braym.projetobitlifeclonev1.infrastructure.persistence;
 
-import br.com.braym.projetobitlifeclonev1.domain.EstadoVidaBase;
+import br.com.braym.projetobitlifeclonev1.domain.EstadoVidaImpl;
 import br.com.braym.projetobitlifeclonev1.domain.Personagem;
 import br.com.braym.projetobitlifeclonev1.impl.ConsoleObservador;
 import br.com.braym.projetobitlifeclonev1.interfaces.EstadoVida;
 import br.com.braym.projetobitlifeclonev1.interfaces.Observador;
+import br.com.braym.projetobitlifeclonev1.utils.FaseDaVida;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -26,12 +27,15 @@ import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -86,6 +90,10 @@ public class GerenciadorSalvamentoJogo {
                 .registerTypeAdapter(Observador.class, new ObservadorAdapter())
                 // Adaptador para a interface EstadoVida
                 .registerTypeAdapter(EstadoVida.class, new EstadoVidaAdapter())
+                // Adaptadores para Random e suas subclasses
+                .registerTypeAdapter(Random.class, new RandomAdapter())
+                .registerTypeAdapter(ThreadLocalRandom.class, new RandomAdapter())
+                .registerTypeAdapter(SecureRandom.class, new RandomAdapter())
                 .create();
     }
     
@@ -284,6 +292,24 @@ public class GerenciadorSalvamentoJogo {
     }
     
     /**
+     * Adaptador para serialização/deserialização de objetos Random
+     */
+    private static class RandomAdapter implements JsonSerializer<Random>, JsonDeserializer<Random> {
+        @Override
+        public JsonElement serialize(Random src, Type typeOfSrc, JsonSerializationContext context) {
+            // Não tenta serializar os campos internos do Random
+            return new JsonObject();
+        }
+        
+        @Override
+        public Random deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) 
+                throws JsonParseException {
+            // Cria uma nova instância de Random
+            return new Random();
+        }
+    }
+    
+    /**
      * Adaptador para serialização/deserialização da interface EstadoVida
      */
     private static class EstadoVidaAdapter implements JsonSerializer<EstadoVida>, JsonDeserializer<EstadoVida> {
@@ -301,19 +327,14 @@ public class GerenciadorSalvamentoJogo {
             JsonObject jsonObject = json.getAsJsonObject();
             String estado = jsonObject.get("estado").getAsString();
             
-            // Base64ado no estado, retorna a instância apropriada
-            switch (estado) {
-                case "Infância":
-                    return new EstadoVidaBase.Infancia();
-                case "Adolescência":
-                    return new EstadoVidaBase.Adolescencia();
-                case "Adulto":
-                    return new EstadoVidaBase.Adulto();
-                case "Velhice":
-                    return new EstadoVidaBase.Velhice();
-                default:
-                    return new EstadoVidaBase.Infancia(); // Fallback para infância
-            }
+            // Baseado no estado, retorna a instância apropriada usando EstadoVidaImpl
+            return switch (estado) {
+                case "INFANCIA" -> new EstadoVidaImpl(FaseDaVida.INFANCIA);
+                case "ADOLESCENCIA" -> new EstadoVidaImpl(FaseDaVida.ADOLESCENCIA);
+                case "ADULTO" -> new EstadoVidaImpl(FaseDaVida.ADULTO);
+                case "VELHICE" -> new EstadoVidaImpl(FaseDaVida.VELHICE);
+                default -> new EstadoVidaImpl(FaseDaVida.INFANCIA); // Fallback para infância
+            };
         }
     }
 }
